@@ -1,0 +1,80 @@
+@import '../../sass/abstracts';
+.arching {
+  @include content-2(0, 1rem, 1rem, $grey-ultra-light);
+  &--page-title {
+    background: scale-color($blue-dark, $lightness: +90%);
+    border-radius: 1rem 1rem 0 0;
+    h1 {
+      font-size: 1.5rem;
+    }
+    & .menu-dropdown {
+      & .btn-white {
+        width: auto !important;
+      }
+    }
+  }
+  #status {
+    option {
+      &::after {
+        display: inline-block;
+        font-style: normal;
+        font-variant: normal;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+      }
+      & .icon-dot {
+        font-family: IcoFont;
+        content: '\ec77';
+      }
+    }
+  }
+  &--tables {
+    @include table(
+      0.5rem,
+      $color-text-active,
+      $white,
+      left,
+      left,
+      $color-text,
+      $color-text,
+      $blue-dark,
+      $blue-dark,
+      $white,
+      1rem
+    );
+  }
+
+  .buttonBar-pink {
+    border-bottom: solid 0.4rem #e83fff;
+  }
+  .buttonBar-fuchsia {
+    border-bottom: solid 0.4rem #e61967;
+  }
+  .buttonBar-orange {
+    border-bottom: solid 0.4rem #ff5000 !important;
+  }
+  .buttonBar-green {
+    border-bottom: solid 0.4rem #007a2e;
+  }
+
+  .border-box {
+    border-bottom: 1px #a7aaae solid;
+  }
+
+  .result-ammount {
+    background-color: #686868;
+  }
+
+  .flex-full {
+    flex: 0 0 100%;
+  }
+
+  fieldset {
+    p{
+      font-size: 1.3rem;
+    }
+    table td {
+      background-color: #fff;
+    }
+  }
+}
