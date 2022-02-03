@@ -4,9 +4,9 @@
 <img src="https://api.travis-ci.org/nestjs/nest.svg?branch=master" alt="Build" />
 </p>
 
-## Base Project
+## Mockup F8 Project
 
-Note: the name in gitlab is `Base`!
+Note: the name in gitlab is `mockup-approvals`!
 
 This is a base project using React in [Node.js](https://nodejs.org/) version v14.x
 
