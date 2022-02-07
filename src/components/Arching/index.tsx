@@ -55,17 +55,12 @@ export const Arching = () => {
             <DatePicker onChange={onChange} value={value} />
           </div>
           <div className="flex-item flex-item__3 mb-0">
-            <span className="label-input">E.T.V.</span>
-            <input name="local" disabled />
+            <span className="label-input">Empresa de Transporte de Valores</span>
+            <input name="local" />
           </div>
           <div className="flex-item flex-item__3 mb-0">
-            <span className="label-input">Estado</span>
-            <select name="status" id="status">
-              <option value="0">Selecione</option>
-              <option value="1">Abierto</option>
-              <option value="2">Pendiente</option>
-              <option value="3">Cerrado</option>
-            </select>
+            <span className="label-input">Recicladora</span>
+            <input name="local" />
           </div>
           <div className="flex-item flex-item__1 mb-0 mt-2 mr-0">
             <span className={`icofont-ui-press fs-3 status_`}></span>
