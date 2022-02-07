@@ -1,0 +1,56 @@
+[
+    {
+        "group": "Cierre de Caja",
+        "value": null,
+        "important": true,
+        "detail": [
+            {
+                "key": "Ventas",
+                "value": null,
+                "important": true
+            },
+            {
+                "key": "Ticket FAC B",
+                "value": "$0,00",
+                "important": false
+            },
+            {
+                "key": "Factura B",
+                "value": "$169.129,00",
+                "important": false
+            },
+            {
+                "key": "Nota de Crédito B",
+                "value": "0,00",
+                "important": false
+            },
+            {
+                "key": "Nota de Crédito B",
+                "value": "$0,00",
+                "important": false
+            }
+        ]
+    },
+    {
+        "group": "Total Ventas",
+        "value": null,
+        "important": true,
+        "detail": [
+            {
+                "key": "Formas de pago",
+                "value": "0,00",
+                "important": true
+            },
+            {
+                "key": "Efectivo",
+                "value": "$123.434,00",
+                "important": false
+            },
+            {
+                "key": "Pesos",
+                "value": "$0,00",
+                "important": false
+            }
+        ]
+    }
+]

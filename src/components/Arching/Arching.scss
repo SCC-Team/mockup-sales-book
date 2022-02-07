@@ -70,11 +70,29 @@
   }
 
   fieldset {
-    p{
+    p {
       font-size: 1.3rem;
+    }
+    table{
+      width: 95%;
     }
     table td {
       background-color: #fff;
+
+      .collapse-z {
+        margin-right: 1rem;
+        margin-left: -2.5rem;
+      }
+    }
+
+    .font-normal{
+      font-weight: normal;
+    }
+    .font-bold{
+      font-weight: bold;
+    }
+    table td:nth-child(2){
+      text-align: right;
     }
   }
 }

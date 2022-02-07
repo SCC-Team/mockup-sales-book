@@ -1,9 +1,24 @@
 import React, {useState} from 'react';
 import DatePicker from 'react-date-picker';
+
+import {Accordion} from '../Accordion';
+
+import dataMock from './../../mock/mock.json';
+
 import './Arching.scss';
 
 export const Arching = () => {
   const [value, onChange] = useState(new Date());
+
+  const notFound = () => {
+    return (
+      <tr>
+        <td colSpan={5} className="text-center p-13">
+          <span className="no-info">No se encontró información</span>
+        </td>
+      </tr>
+    );
+  };
 
   return (
     <article className="arching">
@@ -216,7 +231,7 @@ export const Arching = () => {
             </div>
           </header>
           <fieldset className="flex-container">
-            <div className="border-box flex-full  flex-container flex-full">
+            <header className="border-box flex-full  flex-container flex-full">
               <div className="flex-item">
                 <p>4/1335</p>
               </div>
@@ -228,123 +243,12 @@ export const Arching = () => {
               <div className="flex-item text-end">
                 <p>5254</p>
               </div>
-            </div>
-            <div className="flex-item flex-full mt-1">
-              <div className="flex-item">
-                <p>
-                  <strong>Cierre de Caja</strong>
-                </p>
-              </div>
-            </div>
-            <div className="flex-item flex-full border-box">
-              <div className="flex-item">
-                <p>
-                  <strong>Ventas</strong>
-                </p>
-              </div>
-              <div>
-                <table className="mb-1">
-                  <tbody>
-                    <tr>
-                      <td>Ticket C.F.</td>
-                      <td className="text-end">3.869,00</td>
-                    </tr>
-                    <tr>
-                      <td>Ticket FAC. B</td>
-                      <td className="text-end">0,00</td>
-                    </tr>
-                    <tr>
-                      <td>Factura B</td>
-                      <td className="text-end">169.129,20</td>
-                    </tr>
-                    <tr>
-                      <td>Nota de Crédito B</td>
-                      <td className="text-end">0,00</td>
-                    </tr>
-                    <tr>
-                      <td>Nota de Crédito B</td>
-                      <td className="text-end">0,00</td>
-                    </tr>
-                    <tr>
-                      <td>Fact. B Electrónica</td>
-                      <td className="text-end">0,00</td>
-                    </tr>
-                    <tr>
-                      <td>Fact. B Electrónica</td>
-                      <td className="text-end">0,00</td>
-                    </tr>
-                    <tr>
-                      <td>Fact. B Electrónica</td>
-                      <td className="text-end">0,00</td>
-                    </tr>
-                    <tr>
-                      <td>Fact. B Electrónica</td>
-                      <td className="text-end">0,00</td>
-                    </tr>
-                    <tr>
-                      <td>Fact. B Electrónica</td>
-                      <td className="text-end">0,00</td>
-                    </tr>
-                    <tr>
-                      <td>Fact. B Electrónica</td>
-                      <td className="text-end">0,00</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-            <div className="flex-item flex-full border-box">
-              <table className="mb-1">
-                <tbody>
-                  <tr>
-                    <td>
-                      <strong>Total Ventas</strong>
-                    </td>
-                    <td className="text-end">3.869,00</td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <strong>Formas de Pago</strong>
-                    </td>
-                    <td className="text-end">0,00</td>
-                  </tr>
-                  <tr>
-                    <td>Efectivo</td>
-                    <td className="text-end">169.129,20</td>
-                  </tr>
-                  <tr>
-                    <td>Ticket FAC. B</td>
-                    <td className="text-end">0,00</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div className="flex-item flex-full border-box">
-              <table className="mb-1">
-                <tbody>
-                  <tr>
-                    <td>
-                      <strong>Otras Formas de Pago</strong>
-                    </td>
-                    <td className="text-end">0,00</td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <strong>Tarjeta CMR</strong>
-                    </td>
-                    <td className="text-end">169.129,20</td>
-                  </tr>
-                  <tr>
-                    <td>Cuenta Corriente</td>
-                    <td className="text-end">0,00</td>
-                  </tr>
-                  <tr>
-                    <td>Vale Crédito</td>
-                    <td className="text-end">0,00</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
+            </header>
+            {dataMock.length > 0
+              ? dataMock.map((data: any, i: any) => (
+                  <Accordion data={data} key={i + 1} />
+                ))
+              : notFound()}
           </fieldset>
         </div>
       </section>
