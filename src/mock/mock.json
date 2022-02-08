@@ -5,24 +5,34 @@
     "zeta": [
         {
             "group": "Total Ventas",
-            "value": "239482394",
+            "value": "$32.423.432",
             "important": true,
             "detail": [
                 {
                     "key": "Efectivo",
-                    "value": "32423432",
+                    "value": "$32.423.432",
                     "important": false
                 }
             ]
         },
         {
             "group": "Otras Formas De Pago",
-            "value": "2310",
+            "value": "$35.000",
             "important": true,
             "detail": [
                 {
                     "key": "Tarjeta CMR",
-                    "value": "20000",
+                    "value": "$20.000",
+                    "important": false
+                },
+                {
+                    "key": "Cuenta Corriente",
+                    "value": "$10.000",
+                    "important": false
+                },
+                {
+                    "key": "Vale Crédito",
+                    "value": "$5.000",
                     "important": false
                 }
             ]
