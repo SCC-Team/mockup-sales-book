@@ -1,54 +1,24 @@
 [
     {
-        "group": "Cierre de Caja",
-        "value": null,
+        "group": "Total Ventas",
+        "value": "239482394",
         "important": true,
         "detail": [
             {
-                "key": "Ventas",
-                "value": null,
-                "important": true
-            },
-            {
-                "key": "Ticket FAC B",
-                "value": "$0,00",
-                "important": false
-            },
-            {
-                "key": "Factura B",
-                "value": "$169.129,00",
-                "important": false
-            },
-            {
-                "key": "Nota de Crédito B",
-                "value": "0,00",
-                "important": false
-            },
-            {
-                "key": "Nota de Crédito B",
-                "value": "$0,00",
+                "key": "Efectivo",
+                "value": "32423432",
                 "important": false
             }
         ]
     },
     {
-        "group": "Total Ventas",
-        "value": null,
+        "group": "Otras Formas De Pago",
+        "value": "2310",
         "important": true,
         "detail": [
             {
-                "key": "Formas de pago",
-                "value": "0,00",
-                "important": true
-            },
-            {
-                "key": "Efectivo",
-                "value": "$123.434,00",
-                "important": false
-            },
-            {
-                "key": "Pesos",
-                "value": "$0,00",
+                "key": "Tarjeta CMR",
+                "value": "20000",
                 "important": false
             }
         ]

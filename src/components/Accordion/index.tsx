@@ -27,7 +27,7 @@ export const Accordion = ({data}: any) => {
                   }}></span>
                 {data.group}
               </td>
-              <td></td>
+              <td>{data.value}</td>
             </tr>
             {open && (
               <>
