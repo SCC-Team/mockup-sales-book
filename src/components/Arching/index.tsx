@@ -35,6 +35,7 @@ export const Arching = () => {
           </div>
         </div>
       </header>
+      <div className="animate__animated animate__fast animate__fadeIn">
       <section className="arching--filter m-1">
         <fieldset className="flex-container">
           <legend>Filtro</legend>
@@ -55,7 +56,9 @@ export const Arching = () => {
             <DatePicker onChange={onChange} value={value} />
           </div>
           <div className="flex-item flex-item__3 mb-0">
-            <span className="label-input">Empresa de Transporte de Valores</span>
+            <span className="label-input">
+              Empresa de Transporte de Valores
+            </span>
             <input name="local" />
           </div>
           <div className="flex-item flex-item__3 mb-0">
@@ -228,25 +231,27 @@ export const Arching = () => {
           <fieldset className="flex-container">
             <header className="border-box flex-full  flex-container flex-full">
               <div className="flex-item">
-                <p>4/1335</p>
+                <p>{dataMock.localTerminal}</p>
               </div>
               <div className="flex-item text-center">
                 <p>
-                  <strong>Hora </strong>16:47
+                  <strong>Hora </strong>
+                  {dataMock.hour}
                 </p>
               </div>
               <div className="flex-item text-end">
-                <p>5254</p>
+                <p>{dataMock.originSequence}</p>
               </div>
             </header>
-            {dataMock.length > 0
-              ? dataMock.map((data: any, i: any) => (
+            {dataMock.zeta.length > 0
+              ? dataMock.zeta.map((data: any, i: any) => (
                   <Accordion data={data} key={i + 1} />
                 ))
               : notFound()}
           </fieldset>
         </div>
       </section>
+      </div>
     </article>
   );
 };

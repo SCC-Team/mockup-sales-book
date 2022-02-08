@@ -1,26 +1,31 @@
-[
-    {
-        "group": "Total Ventas",
-        "value": "239482394",
-        "important": true,
-        "detail": [
-            {
-                "key": "Efectivo",
-                "value": "32423432",
-                "important": false
-            }
-        ]
-    },
-    {
-        "group": "Otras Formas De Pago",
-        "value": "2310",
-        "important": true,
-        "detail": [
-            {
-                "key": "Tarjeta CMR",
-                "value": "20000",
-                "important": false
-            }
-        ]
-    }
-]
+{
+    "localTerminal": "70/1440",
+    "originSequence": "4490",
+    "hour": "14:30",
+    "zeta": [
+        {
+            "group": "Total Ventas",
+            "value": "239482394",
+            "important": true,
+            "detail": [
+                {
+                    "key": "Efectivo",
+                    "value": "32423432",
+                    "important": false
+                }
+            ]
+        },
+        {
+            "group": "Otras Formas De Pago",
+            "value": "2310",
+            "important": true,
+            "detail": [
+                {
+                    "key": "Tarjeta CMR",
+                    "value": "20000",
+                    "important": false
+                }
+            ]
+        }
+    ]
+}

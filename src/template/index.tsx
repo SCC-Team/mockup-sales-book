@@ -2,6 +2,8 @@ import React from 'react';
 import {Menu} from '../components/Menu';
 import {Arching} from '../components/Arching';
 
+import 'animate.css';
+
 export const Template = () => {
   return (
     <div>
