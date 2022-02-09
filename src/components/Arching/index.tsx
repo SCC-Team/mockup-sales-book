@@ -35,7 +35,7 @@ export const Arching = () => {
           </div>
         </div>
       </header>
-      <div className="animate__animated animate__fast animate__fadeIn">
+      <section className="animate__animated animate__fast animate__fadeIn">
         <section className="arching--filter m-1">
           <fieldset className="flex-container">
             <legend>Filtro</legend>
@@ -254,7 +254,7 @@ export const Arching = () => {
             </fieldset>
           </div>
         </section>
-      </div>
+      </section>
     </article>
   );
 };
