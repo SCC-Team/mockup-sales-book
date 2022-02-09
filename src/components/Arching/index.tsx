@@ -76,19 +76,19 @@ export const Arching = () => {
               <section className="card flex-item">
                 <h2 className="card--title">Diferencia Caja</h2>
                 <div className="card--content buttonBar-pink">
-                  <h3 className="card--content__number">$23.005</h3>
+                  <h3 className="card--content__number">23.005</h3>
                 </div>
               </section>
               <section className="card flex-item">
                 <h2 className="card--title">Compensación</h2>
                 <div className="card--content buttonBar-green">
-                  <h3 className="card--content__number">$23.005</h3>
+                  <h3 className="card--content__number">23.005</h3>
                 </div>
               </section>
               <section className="card flex-item">
                 <h2 className="card--title">Diferencia Real</h2>
                 <div className="card--content buttonBar-fuchsia">
-                  <h3 className="card--content__number">$23.005</h3>
+                  <h3 className="card--content__number">23.005</h3>
                 </div>
               </section>
             </div>
@@ -97,7 +97,7 @@ export const Arching = () => {
             <section className="card">
               <h2 className="card--title">Diferencia Z</h2>
               <div className="card--content buttonBar-orange">
-                <h3 className="card--content__number">$23.005</h3>
+                <h3 className="card--content__number">23.005</h3>
               </div>
             </section>
           </div>
@@ -124,10 +124,10 @@ export const Arching = () => {
                   <tbody>
                     <tr>
                       <td>Efectivo</td>
-                      <td>$176.086,16</td>
-                      <td>$1.531,18</td>
-                      <td>$1.610,45</td>
-                      <td>$1.827,29</td>
+                      <td>176.086,16</td>
+                      <td>1.531,18</td>
+                      <td>1.610,45</td>
+                      <td>1.827,29</td>
                     </tr>
                     <tr>
                       <td>Efectivo</td>
@@ -153,8 +153,8 @@ export const Arching = () => {
                   </tbody>
                   <thead>
                     <tr>
-                      <th colSpan={4}> Diferencia Total</th>
-                      <th className="result-ammount">$1.827,9</th>
+                      <th colSpan={4}> Diferencia Caja</th>
+                      <th className="result-ammount">23.005</th>
                     </tr>
                   </thead>
                 </table>
@@ -171,7 +171,8 @@ export const Arching = () => {
                   <thead>
                     <tr>
                       <th>Compensaciones</th>
-                      <th>Observaciones</th>
+                      <th>Estado</th>
+                      <th>Monto</th>
                       <th>Monto Compensado</th>
                       <th>Diferencia</th>
                     </tr>
@@ -183,8 +184,9 @@ export const Arching = () => {
                         Lorem ipsum dolor sit amet consectetur, adipisicing
                         elit.
                       </td>
-                      <td>$1.531,18</td>
-                      <td>$1.827.29</td>
+                      <td>1.531,18</td>
+                      <td>1.531,18</td>
+                      <td>1.827.29</td>
                     </tr>
                     <tr>
                       <td>Carta Aviso Central</td>
@@ -203,12 +205,15 @@ export const Arching = () => {
                       </td>
                       <td>0,00</td>
                       <td>0,00</td>
+                      <td>0,00</td>
                     </tr>
                   </tbody>
                   <thead>
                     <tr>
-                      <th colSpan={3}> Diferencia Real</th>
-                      <th className="result-ammount">$1.827,9</th>
+                      <th colSpan={2}>Total</th>
+                      <th >1.827,9</th>
+                      <th >1.827,9</th>
+                      <th className="result-ammount">1.827,9</th>
                     </tr>
                   </thead>
                 </table>
@@ -234,20 +239,20 @@ export const Arching = () => {
             <fieldset className="flex-container">
               <header className="border-box flex-full  flex-container flex-full">
                 <div className="flex-item">
-                  <p>{dataMock.localTerminal}</p>
+                  <p>{dataMock.data.localTerminal}</p>
                 </div>
                 <div className="flex-item text-center">
                   <p>
                     <strong>Hora </strong>
-                    {dataMock.hour}
+                    {dataMock.data.hour}
                   </p>
                 </div>
                 <div className="flex-item text-end">
-                  <p>{dataMock.originSequence}</p>
+                  <p>{dataMock.data.originSequence}</p>
                 </div>
               </header>
-              {dataMock.zeta.length > 0
-                ? dataMock.zeta.map((data: any, i: any) => (
+              {dataMock.data.zeta.length > 0
+                ? dataMock.data.zeta.map((data: any, i: any) => (
                     <Accordion data={data} key={i + 1} />
                   ))
                 : notFound()}

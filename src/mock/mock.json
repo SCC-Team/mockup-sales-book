@@ -1,41 +1,81 @@
 {
-    "localTerminal": "70/1440",
-    "originSequence": "4490",
-    "hour": "14:30",
-    "zeta": [
-        {
-            "group": "Total Ventas",
-            "value": "$32.423.432",
-            "important": true,
-            "detail": [
-                {
-                    "key": "Efectivo",
-                    "value": "$32.423.432",
-                    "important": false
-                }
-            ]
-        },
-        {
-            "group": "Otras Formas De Pago",
-            "value": "$35.000",
-            "important": true,
-            "detail": [
-                {
-                    "key": "Tarjeta CMR",
-                    "value": "$20.000",
-                    "important": false
-                },
-                {
-                    "key": "Cuenta Corriente",
-                    "value": "$10.000",
-                    "important": false
-                },
-                {
-                    "key": "Vale Crédito",
-                    "value": "$5.000",
-                    "important": false
-                }
-            ]
-        }
-    ]
+    "web": true,
+    "data": {
+        "localTerminal": "70/1411",
+        "originSequence": 4260,
+        "hour": "20:30",
+        "zeta": [
+            {
+                "group": "Cierre de caja",
+                "value": "605000",
+                "important": true,
+                "detail": [
+                    {
+                        "key": "ballotAmount",
+                        "value": "234359"
+                    },
+                    {
+                        "key": " invoiceAmount",
+                        "value": "105000"
+                    },
+                    {
+                        "key": "creditNoteAmount",
+                        "value": "0"
+                    },
+                    {
+                        "key": "debitNoteAmount",
+                        "value": "0"
+                    },
+                    {
+                        "key": "ticketAmount",
+                        "value": "0"
+                    },
+                    {
+                        "key": "guideAmount",
+                        "value": "0"
+                    },
+                    {
+                        "key": "totalAmount",
+                        "value": "605000"
+                    }
+                ]
+            },
+            {
+                "group": "Total Ventas",
+                "value": "605000",
+                "important": true,
+                "detail": [
+                    {
+                        "key": "Efectivo",
+                        "value": 605000,
+                        "important": false
+                    },
+                    {
+                        "key": "Dolares",
+                        "value": 0,
+                        "important": false
+                    }
+                ]
+            },
+            {
+                "group": "Otras Formas de Pago",
+                "value": "320000",
+                "important": true,
+                "detail": [
+                    {
+                        "key": "Tarjeta CMR",
+                        "value": 20000,
+                        "important": false
+                    },
+                    {
+                        "key": "Cuenta Corriente",
+                        "value": 300000,
+                        "important": false
+                    }
+                ]
+            }
+        ]
+    },
+    "language": "ES-CL",
+    "options": "{ \"style\": \"currency\", \"currency\": \"CLP\" }"
 }

@@ -44,17 +44,20 @@
     );
   }
 
-  .buttonBar-pink {
-    border-bottom: solid 0.4rem #e83fff;
-  }
-  .buttonBar-fuchsia {
-    border-bottom: solid 0.4rem #e61967;
-  }
-  .buttonBar-orange {
-    border-bottom: solid 0.4rem #ff5000 !important;
-  }
-  .buttonBar-green {
-    border-bottom: solid 0.4rem #007a2e;
+  .card{
+
+    .buttonBar-pink {
+      border-bottom: solid 0.4rem #e83fff;
+    }
+    .buttonBar-fuchsia {
+      border-bottom: solid 0.4rem #e61967;
+    }
+    .buttonBar-orange {
+      border-bottom: solid 0.4rem #ff5000 !important;
+    }
+    .buttonBar-green {
+      border-bottom: solid 0.4rem #007a2e;
+    }
   }
 
   .border-box {
@@ -68,7 +71,7 @@
   .flex-full {
     flex: 0 0 100%;
   }
-
+  
   fieldset {
     p {
       font-size: 1.3rem;
