@@ -9,6 +9,7 @@
     "@types/react-dom": "^17.0.11",
     "animate.css": "^4.1.1",
     "node-sass": "^7.0.1",
+    "npm-run-all": "^4.1.5",
     "prettier": "^2.5.1",
     "react": "^17.0.2",
     "react-date-picker": "^8.3.6",
@@ -17,10 +18,13 @@
     "typescript": "^4.5.5"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "dev": "npm run build:tailwind && react-scripts start",
+    "build": "npm run build:tailwind &&react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "build:tailwind": "postcss src/postcss/tailwind.css -o src/postcss/main.css",
+    "watch:tailwind": "postcss -w src/postcss/tailwind.css -o src/postcss/main.css",
+    "start": "run-p watch:tailwind dev"
   },
   "eslintConfig": {
     "extends": [
@@ -39,5 +43,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.2",
+    "postcss-cli": "^9.1.0",
+    "tailwindcss": "^3.0.21"
   }
 }
