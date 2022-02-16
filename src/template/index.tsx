@@ -1,6 +1,7 @@
 import React from 'react';
 import {Menu} from '../components/Menu';
-import {Arching} from '../components/Arching';
+// import {Arching} from '../components/Arching'; //VER PANEL DE ARQUEO
+import {Terminal} from '../components/Terminal'; //VER ESTADO DE TERMINALES
 
 export const Template = () => {
   return (
@@ -28,7 +29,8 @@ export const Template = () => {
       </header>
       <section className="routers">
         <Menu />
-        <Arching />
+        {/* <Arching /> */}
+        <Terminal />
       </section>
     </div>
   );

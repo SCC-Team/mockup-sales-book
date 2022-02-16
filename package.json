@@ -3,27 +3,38 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@scc/react-big-calendar": "^0.1.2",
     "@scc/styles": "^1.0.17",
     "@types/node": "^16.11.22",
     "@types/react": "^17.0.38",
     "@types/react-dom": "^17.0.11",
     "animate.css": "^4.1.1",
+    "clsx": "^1.1.1",
+    "date-arithmetic": "^4.1.0",
+    "dom-helpers": "^5.2.1",
+    "memoize-one": "^6.0.0",
+    "moment": "^2.29.1",
+    "moment-timezone": "^0.5.34",
     "node-sass": "^7.0.1",
     "npm-run-all": "^4.1.5",
+    "postcss-cli": "^9.1.0",
     "prettier": "^2.5.1",
     "react": "^17.0.2",
     "react-date-picker": "^8.3.6",
     "react-dom": "^17.0.2",
+    "react-overlays": "^5.1.1",
     "react-scripts": "5.0.0",
-    "typescript": "^4.5.5"
+    "sass": "^1.49.7",
+    "typescript": "^4.5.5",
+    "uncontrollable": "^7.2.1"
   },
   "scripts": {
     "dev": "npm run build:tailwind && react-scripts start",
     "build": "npm run build:tailwind &&react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "build:tailwind": "postcss src/postcss/tailwind.css -o src/postcss/main.css",
-    "watch:tailwind": "postcss -w src/postcss/tailwind.css -o src/postcss/main.css",
+    "build:tailwind": "postcss src/css/tailwind.css -o src/css/main.css",
+    "watch:tailwind": "postcss -w src/css/tailwind.css -o src/css/main.css",
     "start": "run-p watch:tailwind dev"
   },
   "eslintConfig": {
@@ -46,7 +57,6 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.4.2",
-    "postcss-cli": "^9.1.0",
     "tailwindcss": "^3.0.21"
   }
 }

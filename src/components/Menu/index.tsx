@@ -57,6 +57,11 @@ export const Menu = () => {
             </div>
             <div className="accordion-item">
               <a className="menu--pather active" href="#">
+                <span className="mr-5 icofont-bars"></span> Estado de Terminales
+              </a>
+            </div>
+            <div className="accordion-item">
+              <a className="menu--pather" href="#">
                 <span className="mr-5 icofont-bars"></span> Panel de Arqueo
               </a>
             </div>

@@ -1,0 +1,98 @@
+@import '../../sass/abstracts';
+.terminal {
+  @include content-2(0, 1rem, 1rem, $grey-ultra-light);
+  &--page-title {
+    background: scale-color($blue-dark, $lightness: +90%);
+    border-radius: 1rem 1rem 0 0;
+    h1 {
+      font-size: 1.5rem;
+    }
+    & .menu-dropdown {
+      & .btn-white {
+        width: auto !important;
+      }
+    }
+  }
+
+  .count {
+    font-size: 1.1rem;
+    background-color: $white;
+    border-radius: 3rem;
+    padding: 0.3rem;
+    line-height: 2rem;
+  }
+
+  .rbc-calendar {
+    min-height: 100vh;
+    h3.fs-3.rbc-toolbar-label {
+      text-align: left;
+    }
+    .event-item {
+      padding: 0 0.2rem;
+    }
+    .rbc-event-content {
+      min-width: 18rem;
+    }
+    .rbc-show-more {
+      display: none;
+    }
+    .content {
+      .count {
+        background-color: $white;
+      }
+      .description {
+        font-size: 1.1rem;
+        padding-left: 0.3rem;
+      }
+    }
+  }
+
+  .sidebar {
+    width: 15%;
+    .btn-group {
+      padding: 2rem 1rem;
+      .left {
+        float: left;
+      }
+      .right {
+        float: right;
+      }
+      button {
+        line-height: 3rem;
+        span {
+          font-weight: normal;
+        }
+        .pendingIncome {
+          background-color: #ffdb04;
+          color: #897711;
+        }
+        .pending {
+          background-color: #ffe6ee;
+          color: #ee0c64;
+        }
+        .square {
+          background-color: #d6eae8;
+          color: #238f51;
+        }
+
+      }
+      .terminal {
+        span{
+          margin: 0;
+
+        }
+        .count{
+          margin-top: 0.5rem;
+          width: 2rem;
+          height: 2rem;
+        }
+        .pending {
+          background-color: #ee0c64;
+        }
+        .square {
+          background-color: #238f51;
+        }
+      }
+    }
+  }
+}

@@ -3,7 +3,7 @@ import DatePicker from 'react-date-picker';
 
 import {Accordion} from '../Accordion';
 
-import dataMock from './../../mock/mock.json';
+import dataMock from './../../mock/arching.json';
 
 import './Arching.scss';
 
