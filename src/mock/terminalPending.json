@@ -2,63 +2,43 @@
     "data": {
         "results": [
             {
-                "terminal": 80,
+                "terminal": 20,
                 "status": "pending"
             },
             {
-                "terminal": 80,
+                "terminal": 3803,
                 "status": "pending"
             },
             {
-                "terminal": 80,
+                "terminal": 3806,
                 "status": "pending"
             },
             {
-                "terminal": 80,
+                "terminal": 3809,
                 "status": "pending"
             },
             {
-                "terminal": 80,
+                "terminal": 3812,
                 "status": "pending"
             },
             {
-                "terminal": 80,
+                "terminal": 3815,
                 "status": "pending"
             },
             {
-                "terminal": 80,
+                "terminal": 3818,
                 "status": "pending"
             },
             {
-                "terminal": 80,
+                "terminal": 3821,
                 "status": "pending"
             },
             {
-                "terminal": 80,
+                "terminal": 3824,
                 "status": "pending"
             },
             {
-                "terminal": 80,
-                "status": "pending"
-            },
-            {
-                "terminal": 80,
-                "status": "pending"
-            },
-            {
-                "terminal": 80,
-                "status": "pending"
-            },
-            {
-                "terminal": 80,
-                "status": "pending"
-            },
-            {
-                "terminal": 80,
-                "status": "pending"
-            },
-            {
-                "terminal": 80,
+                "terminal": 3827,
                 "status": "pending"
             }
         ]

@@ -23,15 +23,19 @@
   }
 
   .rbc-calendar {
-    min-height: 100vh;
+    min-height: 73rem;
     h3.fs-3.rbc-toolbar-label {
       text-align: left;
+    }
+    .rbc-month-row {
+      min-height: 13rem;
     }
     .event-item {
       padding: 0 0.2rem;
     }
-    .rbc-event-content {
-      min-width: 18rem;
+    .rbc-event {
+      margin: 2px 0;
+      padding: 0px 2px;
     }
     .rbc-show-more {
       display: none;
@@ -39,18 +43,23 @@
     .content {
       .count {
         background-color: $white;
+        padding: 0.2rem 0.5rem;
+        border-radius: 16rem;
       }
       .description {
         font-size: 1.1rem;
         padding-left: 0.3rem;
+        line-height: 2rem;
       }
     }
   }
 
   .sidebar {
-    width: 15%;
+    width: 20%;
     .btn-group {
-      padding: 2rem 1rem;
+      height: 73rem;
+      overflow-y: scroll;
+      padding: 0;
       .left {
         float: left;
       }
@@ -58,6 +67,7 @@
         float: right;
       }
       button {
+        padding: 0 1rem;
         line-height: 3rem;
         span {
           font-weight: normal;
@@ -74,14 +84,12 @@
           background-color: #d6eae8;
           color: #238f51;
         }
-
       }
       .terminal {
-        span{
+        span {
           margin: 0;
-
         }
-        .count{
+        .count {
           margin-top: 0.5rem;
           width: 2rem;
           height: 2rem;
@@ -91,6 +99,14 @@
         }
         .square {
           background-color: #238f51;
+        }
+      }
+
+      .terminal-detail {
+        cursor: auto;
+        &:hover {
+          box-shadow: none;
+          transform: none;
         }
       }
     }

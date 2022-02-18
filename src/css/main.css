@@ -1,5 +1,7 @@
-/* @tailwind base;
-@tailwind components; */
+/* @tailwind base; */
+.float-right {
+    float: right
+}
 .m-1 {
     margin: 0.25rem
 }
@@ -36,11 +38,17 @@
 .mr-5 {
     margin-right: 1.25rem
 }
-.mt-4 {
-    margin-top: 1rem
+.mb-2 {
+    margin-bottom: 0.5rem
+}
+.mr-1 {
+    margin-right: 0.25rem
 }
 .table {
     display: table
+}
+.w-11\/12 {
+    width: 91.666667%
 }
 .p-1 {
     padding: 0.25rem
@@ -54,12 +62,25 @@
 .pl-10 {
     padding-left: 2.5rem
 }
+.pt-1 {
+    padding-top: 0.25rem
+}
+.text-left {
+    text-align: left
+}
 .text-center {
     text-align: center
+}
+.text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem
 }
 .font-bold {
     font-weight: 700
 }
 .font-normal {
     font-weight: 400
+}
+.normal-case {
+    text-transform: none
 }

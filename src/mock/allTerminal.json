@@ -2,63 +2,123 @@
     "data": {
         "results": [
             {
-                "terminal": 80,
+                "terminal": 19,
                 "status": "pendingIncome"
             },
             {
-                "terminal": 80,
+                "terminal": 20,
                 "status": "pending"
             },
             {
-                "terminal": 80,
+                "terminal": 3801,
                 "status": "square"
             },
             {
-                "terminal": 80,
+                "terminal": 3802,
                 "status": "pendingIncome"
             },
             {
-                "terminal": 80,
+                "terminal": 3803,
                 "status": "pending"
             },
             {
-                "terminal": 80,
+                "terminal": 3804,
                 "status": "square"
             },
             {
-                "terminal": 80,
+                "terminal": 3805,
                 "status": "pendingIncome"
             },
             {
-                "terminal": 80,
+                "terminal": 3806,
                 "status": "pending"
             },
             {
-                "terminal": 80,
+                "terminal": 3807,
                 "status": "square"
             },
             {
-                "terminal": 80,
+                "terminal": 3808,
                 "status": "pendingIncome"
             },
             {
-                "terminal": 80,
+                "terminal": 3809,
                 "status": "pending"
             },
             {
-                "terminal": 80,
+                "terminal": 3810,
                 "status": "square"
             },
             {
-                "terminal": 80,
+                "terminal": 3811,
                 "status": "pendingIncome"
             },
             {
-                "terminal": 80,
+                "terminal": 3812,
                 "status": "pending"
             },
             {
-                "terminal": 80,
+                "terminal": 3813,
+                "status": "square"
+            },
+            {
+                "terminal": 3814,
+                "status": "pendingIncome"
+            },
+            {
+                "terminal": 3815,
+                "status": "pending"
+            },
+            {
+                "terminal": 3816,
+                "status": "square"
+            },
+            {
+                "terminal": 3817,
+                "status": "pendingIncome"
+            },
+            {
+                "terminal": 3818,
+                "status": "pending"
+            },
+            {
+                "terminal": 3819,
+                "status": "square"
+            },
+            {
+                "terminal": 3820,
+                "status": "pendingIncome"
+            },
+            {
+                "terminal": 3821,
+                "status": "pending"
+            },
+            {
+                "terminal": 3822,
+                "status": "square"
+            },
+            {
+                "terminal": 3823,
+                "status": "pendingIncome"
+            },
+            {
+                "terminal": 3824,
+                "status": "pending"
+            },
+            {
+                "terminal": 3825,
+                "status": "square"
+            },
+            {
+                "terminal": 3826,
+                "status": "pendingIncome"
+            },
+            {
+                "terminal": 3827,
+                "status": "pending"
+            },
+            {
+                "terminal": 3828,
                 "status": "square"
             }
         ]
