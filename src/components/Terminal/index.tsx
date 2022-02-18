@@ -13,6 +13,12 @@ import allTerminalMock from './../../mock/allTerminal.json';
 import terminalPendingMock from './../../mock/terminalPending.json';
 import terminalPendingIncomeMock from './../../mock/terminalPendingIncome.json';
 import terminalSquareMock from './../../mock/terminalSquare.json';
+import terminalCalendarSquareMock from './../../mock/terminalCalendarSquare.json';
+import terminalCalendarPendingMock from './../../mock/terminalCalendarPending.json';
+import terminalCalendarPendingIncomeMock from './../../mock/terminalCalendarPendingIncome.json';
+import localPendingMock from './../../mock/localPending.json';
+import localPendingIncomeMock from './../../mock/localPendingIncome.json';
+import localSquareMock from './../../mock/localSquare.json';
 
 import './Terminal.scss';
 
@@ -21,6 +27,7 @@ export const Terminal = () => {
   const [events, setEvents] = useState<any>([]);
   const [allLocal, setAllLocal] = useState<any>([]);
   const [allTerminal, setAllTerminal] = useState<any>([]);
+  const [local, setLocal] = useState<string>('');
   const [terminal, setTerminal] = useState({
     terminal: '',
     status: '',
@@ -28,7 +35,7 @@ export const Terminal = () => {
   });
 
   const onSelectEvent = useCallback((item) => {
-    getStatusTerminal(item.type, item.clickeable);
+    redirectF8(item.clickeable);
   }, []);
 
   const terminalDetailClick = (terminal: any, status: any) => {
@@ -51,30 +58,9 @@ export const Terminal = () => {
     }
   };
 
-  const getStatusTerminal = (type: any, clickeable: any) => {
+  const redirectF8 = (clickeable: any) => {
     if (clickeable) {
-      setAllLocal([]);
-      setTerminal({
-        terminal: '',
-        status: '',
-        show: false,
-      });
-      if (type === 'pendingIncome') {
-        const result: any = terminalPendingIncomeMock;
-        setAllTerminal(result.data.results);
-      }
-      if (type === 'pending') {
-        const result: any = terminalPendingMock;
-        setAllTerminal(result.data.results);
-      }
-      if (type === 'square') {
-        const result: any = terminalSquareMock;
-        setAllTerminal(result.data.results);
-      }
-      if (type === 'all') {
-        const result: any = allTerminalMock;
-        setAllTerminal(result.data.results);
-      }
+      alert('Llévame al F8!!');
     }
   };
 
@@ -85,8 +71,39 @@ export const Terminal = () => {
 
   const handleInputChangeLocal = (e: any) => {
     const value = e.target.value;
-
+    setLocal('Expo Arica');
     handleLocal(value);
+  };
+
+  const handleInputChangeState = (e: any) => {
+    const option = e.target.value;
+    console.log(option)
+    if (option === 'all') {
+      const resultCalendar: any = terminalCalendarMock;
+      setDataCalendar(resultCalendar, true);
+      const resultLocal: any = allLocalMock;
+      setAllLocal(resultLocal.data.results);
+
+
+    }
+    if (option === 'square') {
+      const resultCalendar: any = terminalCalendarSquareMock;
+      setDataCalendar(resultCalendar, true);
+      const resultLocal: any = localSquareMock;
+      setAllLocal(resultLocal.data.results);
+    }
+    if (option === 'pending') {
+      const resultCalendar: any = terminalCalendarPendingMock;
+      setDataCalendar(resultCalendar, true);
+      const resultLocal: any = localPendingMock;
+      setAllLocal(resultLocal.data.results);
+    }
+    if (option === 'pendingIncome') {
+      const resultCalendar: any = terminalCalendarPendingIncomeMock;
+      setDataCalendar(resultCalendar, true);
+      const resultLocal: any = localPendingIncomeMock;
+      setAllLocal(resultLocal.data.results);
+    }
   };
 
   const handleLocal = (option: any) => {
@@ -104,8 +121,10 @@ export const Terminal = () => {
     }
   };
 
-  const allLocalClick = () => {
+
+  const allLocalClick = (local: string) => {
     const result: any = allTerminalMock;
+    setLocal(local);
     setDataCalendar(terminalCalendarDetailMock, true);
     setAllTerminal(result.data.results);
     setAllLocal([]);
@@ -122,14 +141,14 @@ export const Terminal = () => {
     let pendingIncome = [];
     let pending = [];
     let square = [];
-    let all = [];
+    // let all = [];
     if (calendar.data.pendingIncome.length > 0) {
       pendingIncome = calendar.data.pendingIncome.map((item: any) => {
         return {
           title: item.title,
           start: moment(item.date).utc().format('YYYY-MM-DD'),
           end: moment(item.date).utc().format('YYYY-MM-DD'),
-          description: 'Pendiente - Recaudación',
+          description: 'P. Recaudación',
           count: item.count,
           bgcolor: '#FFDB04',
           color: '#897711',
@@ -176,24 +195,7 @@ export const Terminal = () => {
       });
     }
 
-    if (calendar.data.all.length > 0) {
-      all = calendar.data.all.map((item: any) => {
-        return {
-          title: item.title,
-          start: moment(item.date).utc().format('YYYY-MM-DD'),
-          end: moment(item.date).utc().format('YYYY-MM-DD'),
-          description: '',
-          count: item.count,
-          bgcolor: '#0058a3',
-          color: '#fff',
-          success: true,
-          type: 'all',
-          seeDay: true,
-          seeCount: false,
-        };
-      });
-    }
-    eventsResult = pendingIncome.concat(pending).concat(square).concat(all);
+    eventsResult = pendingIncome.concat(pending).concat(square);
     setEvents(eventsResult);
   };
 
@@ -232,6 +234,15 @@ export const Terminal = () => {
               </select>
             </div>
             <div className="flex-item flex-item__3 mb-0">
+              <span className="label-input">Estado</span>
+              <select name="local" onChange={handleInputChangeState}>
+                <option value="all">Todos</option>
+                <option value="pending">Pendiente</option>
+                <option value="pendingIncome">Pendiente Recaudación</option>
+                <option value="square">Cuadrado</option>
+              </select>
+            </div>
+            <div className="flex-item flex-item__3 mb-0">
               <span className="label-input">Fecha</span>
               <DatePicker maxDetail="year" onChange={handleDate} value={date} />
             </div>
@@ -239,88 +250,105 @@ export const Terminal = () => {
           <section className="flex-container">
             <div className="flex-container flex--center flex-item--top sidebar">
               <div className="flex-item mr-0 mb-0">
-                <div className="btn-group pt-1">
+                <div className="btn-group">
                   {/* Todos los locales */}
 
                   {/* Detalle por local */}
                   {allLocal.length > 0 && (
-                    <span className="label-input flex-container normal-case mb-2">
-                      Listado de Locales
-                    </span>
-                  )}
-
-                  {allLocal.length > 0 &&
-                    allLocal.map((data: any, i: any) => (
-                      <button
-                        className="flex-container flex-item btn mb-0 w-100"
-                        key={i + 1}
-                        onClick={() => allLocalClick()}>
-                        <span className="flex-item text-left flex-left">
-                          {data.local}
+                    <>
+                      <fieldset className="flex-container mb-1 mr-1 items-center">
+                        <span className="flex-item label-input py-4 px-0 m-0">
+                          Todos los locales
                         </span>
-                        <div>
-                          <span className="flex-item count pendingIncome">
-                            {data.pendingIncome}
-                          </span>
-                          <span className="flex-item count pending">
-                            {data.pending}
-                          </span>
-                          <span className="flex-item count square">
-                            {data.square}
-                          </span>
-                        </div>
-                      </button>
-                    ))}
+                      </fieldset>
+
+                      <div className="listing-buttons">
+                        {allLocal.length > 0 &&
+                          allLocal.map((data: any, i: any) => (
+                            <button
+                              key={i + 1}
+                              className="flex-container flex-item btn mb-0 w-100"
+                              onClick={() => allLocalClick(data.local)}>
+                              <span className="flex-item text-left flex-left">
+                                {data.local}
+                              </span>
+                              <div>
+                                {data.pendingIncome && (
+                                  <span className="flex-item count pendingIncome">
+                                    {data.pendingIncome}
+                                  </span>
+                                )}
+                                {data.pending && (
+                                  <span className="flex-item count pending">
+                                    {data.pending}
+                                  </span>
+                                )}
+                                {data.square && (
+                                  <span className="flex-item count square">
+                                    {data.square}
+                                  </span>
+                                )}
+                              </div>
+                            </button>
+                          ))}
+                      </div>
+                    </>
+                  )}
 
                   {/* Detalle por local */}
                   {allTerminal.length > 0 && (
                     <>
-                      <span className="label-input normal-case">
-                        Listado de Terminales
-                      </span>
-                      <button
-                        className="btn btn-secondary float-right mr-1"
-                        onClick={() => handleLocal('all')}>
-                        <span className="icofont-exit"></span>Volver
-                      </button>
+                      <fieldset className="flex-container mb-1 mr-1 items-center">
+                        <span className="flex-item label-input py-4 px-0 m-0">
+                          Local {local}
+                        </span>
+                        <button
+                          className="btn btn-small btn-secondary float-right m-0"
+                          onClick={() => handleLocal('all')}>
+                          <span className="icofont-exit"></span>Volver
+                        </button>
+                      </fieldset>
+                      <div className="listing-buttons">
+                        {allTerminal.length > 0 &&
+                          allTerminal.map((data: any, i: any) => (
+                            <button
+                              className="flex-item_19 btn mb-0 w-11/12 terminal"
+                              key={i + 1}
+                              onClick={() =>
+                                terminalDetailClick(data.terminal, data.status)
+                              }>
+                              <span className="flex-item left">
+                                {data.terminal}
+                              </span>
+                              <span
+                                className={`right flex-item count text-sm ${data.status}`}></span>
+                            </button>
+                          ))}
+                      </div>
                     </>
                   )}
-
-                  {allTerminal.length > 0 &&
-                    allTerminal.map((data: any, i: any) => (
-                      <button
-                        className="flex-item_19 btn mb-0 w-11/12 terminal"
-                        key={i + 1}
-                        onClick={() =>
-                          terminalDetailClick(data.terminal, data.status)
-                        }>
-                        <span className="flex-item left">{data.terminal}</span>
-                        <span
-                          className={`right flex-item count text-sm ${data.status}`}></span>
-                      </button>
-                    ))}
 
                   {/* Detalle por terminal */}
                   {terminal.show && (
                     <>
-                      <span className="label-input normal-case">
-                        Detalle del Terminal
-                      </span>
-                      <button
-                        className="btn btn-secondary float-right mr-1"
-                        onClick={() => allLocalClick()}>
-                        <span className="icofont-exit"></span>Volver
+                      <fieldset className="flex-container mb-1 mr-1 items-center">
+                        <span className="flex-item label-input py-4 px-0 m-0">
+                          Terminal {terminal.terminal}
+                        </span>
+                        <button
+                          className="btn btn-small btn-secondary float-right m-0"
+                          onClick={() => allLocalClick(local)}>
+                          <span className="icofont-exit"></span>Volver
+                        </button>
+                      </fieldset>
+                      <button className="flex-item_19 btn mb-0 w-11/12 terminal terminal-detail">
+                        <span className="flex-item left">
+                          {terminal.terminal}
+                        </span>
+                        <span
+                          className={`right flex-item count text-sm ${terminal.status}`}></span>
                       </button>
                     </>
-                  )}
-                  {terminal.show && (
-                    <button className="flex-item_19 btn mb-0 w-11/12 terminal terminal-detail">
-                      <span className="flex-item left">
-                        {terminal.terminal}
-                      </span>
-                      <span
-                        className={`right flex-item count text-sm ${terminal.status}`}></span>
-                    </button>
                   )}
                 </div>
               </div>

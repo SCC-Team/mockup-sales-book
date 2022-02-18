@@ -38,9 +38,6 @@
 .mr-5 {
     margin-right: 1.25rem
 }
-.mb-2 {
-    margin-bottom: 0.5rem
-}
 .mr-1 {
     margin-right: 0.25rem
 }
@@ -50,8 +47,19 @@
 .w-11\/12 {
     width: 91.666667%
 }
+.items-center {
+    align-items: center
+}
 .p-1 {
     padding: 0.25rem
+}
+.py-4 {
+    padding-top: 1rem;
+    padding-bottom: 1rem
+}
+.px-0 {
+    padding-left: 0px;
+    padding-right: 0px
 }
 .pb-0 {
     padding-bottom: 0px
@@ -80,7 +88,4 @@
 }
 .font-normal {
     font-weight: 400
-}
-.normal-case {
-    text-transform: none
 }

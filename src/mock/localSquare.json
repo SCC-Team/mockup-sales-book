@@ -2,20 +2,12 @@
     "data": {
         "results": [
             {
-                "local": "Expo Arica",
-                "pending": 20
-            },
-            {
                 "local": "Expo Valdivia",
                 "square": 20
             },
             {
                 "local": "Rosas",
                 "square": 20
-            },
-            {
-                "local": "Salon Peluquería",
-                "pendingIncome": 20
             },
             {
                 "local": "Sodimac",
@@ -30,60 +22,12 @@
                 "square": 20
             },
             {
-                "local": "Calama Centro",
-                "pending": 20
-            },
-            {
-                "local": "Damas",
-                "pending": 20
-            },
-            {
-                "local": "Lyon",
-                "pendingIncome": 20
-            },
-            {
-                "local": "Expo Lyon",
-                "pendingIncome": 20
-            },
-            {
-                "local": "Rincón Juvenil",
-                "pendingIncome": 20
-            },
-            {
                 "local": "Electro Hogar",
                 "square": 20
             },
             {
                 "local": "Ahumada",
                 "square": 20
-            },
-            {
-                "local": "Casa Matriz",
-                "pendingIncome": 20
-            },
-            {
-                "local": "Ahumada 242",
-                "pendingIncome": 20
-            },
-            {
-                "local": "Ahumada 342",
-                "pendingIncome": 20
-            },
-            {
-                "local": "Puerto Montt",
-                "pendingIncome": 20
-            },
-            {
-                "local": "Castro",
-                "pending": 20
-            },
-            {
-                "local": "Puerto Montt",
-                "pending": 20
-            },
-            {
-                "local": "Expo Arica",
-                "pending": 20
             },
             {
                 "local": "Expo Valdivia",
