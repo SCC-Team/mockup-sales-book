@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@scc/react-big-calendar": "file:../../../Development/react-big-calendar",
+    "@scc/react-big-calendar": "^0.1.4",
     "@scc/styles": "^1.0.18",
     "@types/node": "^16.11.22",
     "@types/react": "^17.0.38",
