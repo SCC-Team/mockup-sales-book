@@ -7,11 +7,11 @@
             },
             {
                 "local": "Expo Valdivia",
-                "square": 20
+                "quadrate": 20
             },
             {
                 "local": "Rosas",
-                "square": 20
+                "quadrate": 20
             },
             {
                 "local": "Salon Peluquería",
@@ -19,15 +19,15 @@
             },
             {
                 "local": "Sodimac",
-                "square": 20
+                "quadrate": 20
             },
             {
                 "local": "Calama",
-                "square": 20
+                "quadrate": 20
             },
             {
                 "local": "Chuquicamata",
-                "square": 20
+                "quadrate": 20
             },
             {
                 "local": "Calama Centro",
@@ -51,11 +51,11 @@
             },
             {
                 "local": "Electro Hogar",
-                "square": 20
+                "quadrate": 20
             },
             {
                 "local": "Ahumada",
-                "square": 20
+                "quadrate": 20
             },
             {
                 "local": "Casa Matriz",
@@ -87,79 +87,79 @@
             },
             {
                 "local": "Expo Valdivia",
-                "square": 20
+                "quadrate": 20
             },
             {
                 "local": "Rosas",
-                "square": 20
+                "quadrate": 20
             },
             {
                 "local": "Salon Peluquería",
-                "square": 20
+                "quadrate": 20
             },
             {
                 "local": "Sodimac",
-                "square": 20
+                "quadrate": 20
             },
             {
                 "local": "Calama",
-                "square": 20
+                "quadrate": 20
             },
             {
                 "local": "Chuquicamata",
-                "square": 20
+                "quadrate": 20
             },
             {
                 "local": "Calama Centro",
-                "square": 20
+                "quadrate": 20
             },
             {
                 "local": "Damas",
-                "square": 20
+                "quadrate": 20
             },
             {
                 "local": "Lyon",
-                "square": 20
+                "quadrate": 20
             },
             {
                 "local": "Expo Lyon",
-                "square": 20
+                "quadrate": 20
             },
             {
                 "local": "Rincón Juvenil",
-                "square": 20
+                "quadrate": 20
             },
             {
                 "local": "Electro Hogar",
-                "square": 20
+                "quadrate": 20
             },
             {
                 "local": "Ahumada",
-                "square": 20
+                "quadrate": 20
             },
             {
                 "local": "Casa Matriz",
-                "square": 20
+                "quadrate": 20
             },
             {
                 "local": "Ahumada 242",
-                "square": 20
+                "quadrate": 20
             },
             {
                 "local": "Ahumada 342",
-                "square": 20
+                "quadrate": 20
             },
             {
                 "local": "Puerto Montt",
-                "square": 20
+                "quadrate": 20
             },
             {
                 "local": "Castro",
-                "square": 20
+                "quadrate": 20
             },
             {
                 "local": "Puerto Montt",
-                "square": 20
+                "quadrate": 20
             }
         ]
     }

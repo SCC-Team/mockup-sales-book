@@ -11,7 +11,7 @@
             },
             {
                 "terminal": 3801,
-                "status": "square"
+                "status": "quadrate"
             },
             {
                 "terminal": 3802,
@@ -23,7 +23,7 @@
             },
             {
                 "terminal": 3804,
-                "status": "square"
+                "status": "quadrate"
             },
             {
                 "terminal": 3805,
@@ -35,7 +35,7 @@
             },
             {
                 "terminal": 3807,
-                "status": "square"
+                "status": "quadrate"
             },
             {
                 "terminal": 3808,
@@ -47,7 +47,7 @@
             },
             {
                 "terminal": 3810,
-                "status": "square"
+                "status": "quadrate"
             },
             {
                 "terminal": 3811,
@@ -59,7 +59,7 @@
             },
             {
                 "terminal": 3813,
-                "status": "square"
+                "status": "quadrate"
             },
             {
                 "terminal": 3814,
@@ -71,7 +71,7 @@
             },
             {
                 "terminal": 3816,
-                "status": "square"
+                "status": "quadrate"
             },
             {
                 "terminal": 3817,
@@ -83,7 +83,7 @@
             },
             {
                 "terminal": 3819,
-                "status": "square"
+                "status": "quadrate"
             },
             {
                 "terminal": 3820,
@@ -95,7 +95,7 @@
             },
             {
                 "terminal": 3822,
-                "status": "square"
+                "status": "quadrate"
             },
             {
                 "terminal": 3823,
@@ -107,7 +107,7 @@
             },
             {
                 "terminal": 3825,
-                "status": "square"
+                "status": "quadrate"
             },
             {
                 "terminal": 3826,
@@ -119,7 +119,7 @@
             },
             {
                 "terminal": 3828,
-                "status": "square"
+                "status": "quadrate"
             }
         ]
     }
