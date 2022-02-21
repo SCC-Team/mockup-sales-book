@@ -7,18 +7,18 @@ import terminalCalendarMock from './../../mock/terminalCalendar.json';
 import terminalCalendarDetailMock from './../../mock/terminalCalendarDetail.json';
 import terminalCalendarDetailPendingMock from './../../mock/terminalCalendarDetailPending.json';
 import terminalCalendarDetailPendingIncomeMock from './../../mock/terminalCalendarDetailPendingIncome.json';
-import terminalCalendarDetailSquareMock from './../../mock/terminalCalendarDetailSquare.json';
+import terminalCalendarDetailquadrateMock from './../../mock/terminalCalendarDetailQuadrate.json';
 import allLocalMock from './../../mock/allLocal.json';
 import allTerminalMock from './../../mock/allTerminal.json';
 import terminalPendingMock from './../../mock/terminalPending.json';
 import terminalPendingIncomeMock from './../../mock/terminalPendingIncome.json';
-import terminalSquareMock from './../../mock/terminalSquare.json';
-import terminalCalendarSquareMock from './../../mock/terminalCalendarSquare.json';
+import terminalquadrateMock from './../../mock/terminalquadrate.json';
+import terminalCalendarquadrateMock from './../../mock/terminalCalendarQuadrate.json';
 import terminalCalendarPendingMock from './../../mock/terminalCalendarPending.json';
 import terminalCalendarPendingIncomeMock from './../../mock/terminalCalendarPendingIncome.json';
 import localPendingMock from './../../mock/localPending.json';
 import localPendingIncomeMock from './../../mock/localPendingIncome.json';
-import localSquareMock from './../../mock/localSquare.json';
+import localquadrateMock from './../../mock/localQuadrate.json';
 
 import './Terminal.scss';
 
@@ -53,8 +53,8 @@ export const Terminal = () => {
     if (status === 'pendingIncome') {
       setDataCalendar(terminalCalendarDetailPendingIncomeMock, false);
     }
-    if (status === 'square') {
-      setDataCalendar(terminalCalendarDetailSquareMock, false);
+    if (status === 'quadrate') {
+      setDataCalendar(terminalCalendarDetailquadrateMock, false);
     }
   };
 
@@ -86,10 +86,10 @@ export const Terminal = () => {
 
 
     }
-    if (option === 'square') {
-      const resultCalendar: any = terminalCalendarSquareMock;
+    if (option === 'quadrate') {
+      const resultCalendar: any = terminalCalendarquadrateMock;
       setDataCalendar(resultCalendar, true);
-      const resultLocal: any = localSquareMock;
+      const resultLocal: any = localquadrateMock;
       setAllLocal(resultLocal.data.results);
     }
     if (option === 'pending') {
@@ -140,7 +140,7 @@ export const Terminal = () => {
     let eventsResult = [];
     let pendingIncome = [];
     let pending = [];
-    let square = [];
+    let quadrate = [];
     // let all = [];
     if (calendar.data.pendingIncome.length > 0) {
       pendingIncome = calendar.data.pendingIncome.map((item: any) => {
@@ -152,7 +152,6 @@ export const Terminal = () => {
           count: item.count,
           bgcolor: '#FFDB04',
           color: '#897711',
-          success: true,
           type: 'pendingIncome',
           seeDay: false,
           seeCount: count,
@@ -169,7 +168,6 @@ export const Terminal = () => {
           count: item.count,
           bgcolor: '#ffe6ee',
           color: '#ee0c64',
-          success: true,
           type: 'pending',
           seeDay: false,
           seeCount: count,
@@ -177,8 +175,8 @@ export const Terminal = () => {
       });
     }
 
-    if (calendar.data.square.length > 0) {
-      square = calendar.data.square.map((item: any) => {
+    if (calendar.data.quadrate.length > 0) {
+      quadrate = calendar.data.quadrate.map((item: any) => {
         return {
           title: item.title,
           start: moment(item.date).utc().format('YYYY-MM-DD'),
@@ -187,15 +185,14 @@ export const Terminal = () => {
           count: item.count,
           bgcolor: '#d6eae8',
           color: '#238f51',
-          success: true,
-          type: 'square',
+          type: 'quadrate',
           seeDay: false,
           seeCount: count,
         };
       });
     }
 
-    eventsResult = pendingIncome.concat(pending).concat(square);
+    eventsResult = pendingIncome.concat(pending).concat(quadrate);
     setEvents(eventsResult);
   };
 
@@ -239,7 +236,7 @@ export const Terminal = () => {
                 <option value="all">Todos</option>
                 <option value="pending">Pendiente</option>
                 <option value="pendingIncome">Pendiente Recaudación</option>
-                <option value="square">Cuadrado</option>
+                <option value="quadrate">Cuadrado</option>
               </select>
             </div>
             <div className="flex-item flex-item__3 mb-0">
@@ -267,25 +264,22 @@ export const Terminal = () => {
                           allLocal.map((data: any, i: any) => (
                             <button
                               key={i + 1}
-                              className="flex-container flex-item btn mb-0 w-100"
+                              className="flex-item_19 btn mb-0 w-11/12 terminal"
                               onClick={() => allLocalClick(data.local)}>
-                              <span className="flex-item text-left flex-left">
+                              <span className="flex-item left">
                                 {data.local}
                               </span>
                               <div>
                                 {data.pendingIncome && (
-                                  <span className="flex-item count pendingIncome">
-                                    {data.pendingIncome}
+                                  <span className="right flex-item count text-sm pendingIncome circle">
                                   </span>
                                 )}
                                 {data.pending && (
-                                  <span className="flex-item count pending">
-                                    {data.pending}
+                                  <span className="right flex-item count text-sm pending circle">
                                   </span>
                                 )}
-                                {data.square && (
-                                  <span className="flex-item count square">
-                                    {data.square}
+                                {data.quadrate && (
+                                  <span className="right flex-item count text-sm quadrate circle">
                                   </span>
                                 )}
                               </div>
@@ -333,7 +327,7 @@ export const Terminal = () => {
                     <>
                       <fieldset className="flex-container mb-1 mr-1 items-center">
                         <span className="flex-item label-input py-4 px-0 m-0">
-                          Terminal {terminal.terminal}
+                        Local {local}
                         </span>
                         <button
                           className="btn btn-small btn-secondary float-right m-0"

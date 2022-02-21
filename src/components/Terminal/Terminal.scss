@@ -1,6 +1,9 @@
 @import '../../sass/abstracts';
 .terminal {
   @include content-2(0, 1rem, 1rem, $grey-ultra-light);
+  .circle{
+    padding: 0.3rem 0.9rem !important;
+  }
   &--page-title {
     background: scale-color($blue-dark, $lightness: +90%);
     border-radius: 1rem 1rem 0 0;
@@ -13,6 +16,7 @@
       }
     }
   }
+
 
   .count {
     font-size: 1.1rem;
@@ -70,17 +74,26 @@
         span {
           font-weight: normal;
         }
+        // .pendingIncome {
+        //   background-color: #ffdb04;
+        //   color: #897711;
+        // }
+        // .pending {
+        //   background-color: #ffe6ee;
+        //   color: #ee0c64;
+        // }
+        // .quadrate {
+        //   background-color: #d6eae8;
+        //   color: #238f51;
+        // }
         .pendingIncome {
           background-color: #ffdb04;
-          color: #897711;
         }
         .pending {
-          background-color: #ffe6ee;
-          color: #ee0c64;
+          background-color: #ee0c64;
         }
-        .square {
-          background-color: #d6eae8;
-          color: #238f51;
+        .quadrate {
+          background-color: #238f51;
         }
       }
       .terminal {
@@ -95,7 +108,7 @@
         .pending {
           background-color: #ee0c64;
         }
-        .square {
+        .quadrate {
           background-color: #238f51;
         }
       }
