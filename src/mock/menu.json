@@ -1,0 +1,33 @@
+{
+    "data": {
+        "results": [
+            {
+                "menu": "Boletas"
+            },
+            {
+                "menu": "Guias"
+            },
+            {
+                "menu": "Notas Credito Boletas"
+            },
+            {
+                "menu": "Facturas"
+            },
+            {
+                "menu": "Notas Credito Facturas"
+            },
+            {
+                "menu": "Notas de Debitos"
+            },
+            {
+                "menu": "Cuadratura ZZZ"
+            },
+            {
+                "menu": "Tickets"
+            },
+            {
+                "menu": "Detalle por Jerarquia"
+            }
+        ]
+    }
+}

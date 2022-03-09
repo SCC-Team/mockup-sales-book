@@ -1,207 +1,34 @@
-import React, {useState, useCallback, useEffect} from 'react';
+import React, {useState, useEffect} from 'react';
 import DatePicker from 'react-date-picker';
-import moment from 'moment-timezone';
-import {TerminalCalendar} from '@scc/react-big-calendar';
 
-import terminalCalendarMock from './../../mock/terminalCalendar.json';
-import terminalCalendarDetailMock from './../../mock/terminalCalendarDetail.json';
-import terminalCalendarDetailPendingMock from './../../mock/terminalCalendarDetailPending.json';
-import terminalCalendarDetailPendingIncomeMock from './../../mock/terminalCalendarDetailPendingIncome.json';
-import terminalCalendarDetailquadrateMock from './../../mock/terminalCalendarDetailQuadrate.json';
-import allLocalMock from './../../mock/allLocal.json';
-import allTerminalMock from './../../mock/allTerminal.json';
-import terminalPendingMock from './../../mock/terminalPending.json';
-import terminalPendingIncomeMock from './../../mock/terminalPendingIncome.json';
-import terminalquadrateMock from './../../mock/terminalquadrate.json';
-import terminalCalendarquadrateMock from './../../mock/terminalCalendarQuadrate.json';
-import terminalCalendarPendingMock from './../../mock/terminalCalendarPending.json';
-import terminalCalendarPendingIncomeMock from './../../mock/terminalCalendarPendingIncome.json';
-import localPendingMock from './../../mock/localPending.json';
-import localPendingIncomeMock from './../../mock/localPendingIncome.json';
-import localquadrateMock from './../../mock/localQuadrate.json';
+import menuMock from './../../mock/menu.json';
+import tableDataMock from './../../mock/tableData.json';
+import headerBoletasMock from './../../mock/headerBoletas.json';
 
 import './Terminal.scss';
 
 export const Terminal = () => {
   const [date, setDate] = useState(new Date());
-  const [events, setEvents] = useState<any>([]);
-  const [allLocal, setAllLocal] = useState<any>([]);
-  const [allTerminal, setAllTerminal] = useState<any>([]);
-  const [local, setLocal] = useState<string>('');
-  const [terminal, setTerminal] = useState({
-    terminal: '',
-    status: '',
-    show: false,
-  });
-
-  const onSelectEvent = useCallback((item) => {
-    redirectF8(item.clickeable);
-  }, []);
-
-  const terminalDetailClick = (terminal: any, status: any) => {
-    setAllTerminal([]);
-    setAllLocal([]);
-    setTerminal({
-      terminal: terminal,
-      status: status,
-      show: true,
-    });
-
-    if (status === 'pending') {
-      setDataCalendar(terminalCalendarDetailPendingMock, false);
-    }
-    if (status === 'pendingIncome') {
-      setDataCalendar(terminalCalendarDetailPendingIncomeMock, false);
-    }
-    if (status === 'quadrate') {
-      setDataCalendar(terminalCalendarDetailquadrateMock, false);
-    }
-  };
-
-  const redirectF8 = (clickeable: any) => {
-    if (clickeable) {
-      alert('Llévame al F8!!');
-    }
-  };
+  const [menu, setMenu] = useState<any>([]);
+  const [tableData, setTableData] = useState<any>([]);
+  const [headerBoletas, setHeaderBoletas] = useState<any>([]);
+  const [toggle, setToggle] = useState<any>(false);
 
   const handleDate = (e: any) => {
     const value = e;
     setDate(value);
   };
 
-  const handleInputChangeLocal = (e: any) => {
-    const value = e.target.value;
-    setLocal('Expo Arica');
-    handleLocal(value);
-  };
-
-  const handleInputChangeState = (e: any) => {
-    const option = e.target.value;
-    console.log(option)
-    if (option === 'all') {
-      const resultCalendar: any = terminalCalendarMock;
-      setDataCalendar(resultCalendar, true);
-      const resultLocal: any = allLocalMock;
-      setAllLocal(resultLocal.data.results);
-
-
-    }
-    if (option === 'quadrate') {
-      const resultCalendar: any = terminalCalendarquadrateMock;
-      setDataCalendar(resultCalendar, true);
-      const resultLocal: any = localquadrateMock;
-      setAllLocal(resultLocal.data.results);
-    }
-    if (option === 'pending') {
-      const resultCalendar: any = terminalCalendarPendingMock;
-      setDataCalendar(resultCalendar, true);
-      const resultLocal: any = localPendingMock;
-      setAllLocal(resultLocal.data.results);
-    }
-    if (option === 'pendingIncome') {
-      const resultCalendar: any = terminalCalendarPendingIncomeMock;
-      setDataCalendar(resultCalendar, true);
-      const resultLocal: any = localPendingIncomeMock;
-      setAllLocal(resultLocal.data.results);
-    }
-  };
-
-  const handleLocal = (option: any) => {
-    if (option === 'all') {
-      const result: any = allLocalMock;
-      setAllLocal(result.data.results);
-      setDataCalendar(terminalCalendarMock, true);
-      setAllTerminal([]);
-    }
-    if (option === 'arica') {
-      const result: any = allTerminalMock;
-      setAllTerminal(result.data.results);
-      setDataCalendar(terminalCalendarDetailMock, true);
-      setAllLocal([]);
-    }
-  };
-
-
-  const allLocalClick = (local: string) => {
-    const result: any = allTerminalMock;
-    setLocal(local);
-    setDataCalendar(terminalCalendarDetailMock, true);
-    setAllTerminal(result.data.results);
-    setAllLocal([]);
-    setTerminal({
-      terminal: '',
-      status: '',
-      show: false,
-    });
-  };
-
-  const setDataCalendar = (calendar: any, count: any) => {
-    //Calendar
-    let eventsResult = [];
-    let pendingIncome = [];
-    let pending = [];
-    let quadrate = [];
-    // let all = [];
-    if (calendar.data.pendingIncome.length > 0) {
-      pendingIncome = calendar.data.pendingIncome.map((item: any) => {
-        return {
-          title: item.title,
-          start: moment(item.date).utc().format('YYYY-MM-DD'),
-          end: moment(item.date).utc().format('YYYY-MM-DD'),
-          description: 'P. Recaudación',
-          count: item.count,
-          bgcolor: '#FFDB04',
-          color: '#897711',
-          type: 'pendingIncome',
-          seeDay: false,
-          seeCount: count,
-        };
-      });
-    }
-    if (calendar.data.pending.length > 0) {
-      pending = calendar.data.pending.map((item: any) => {
-        return {
-          title: item.title,
-          start: moment(item.date).utc().format('YYYY-MM-DD'),
-          end: moment(item.date).utc().format('YYYY-MM-DD'),
-          description: 'Pendiente',
-          count: item.count,
-          bgcolor: '#ffe6ee',
-          color: '#ee0c64',
-          type: 'pending',
-          seeDay: false,
-          seeCount: count,
-        };
-      });
-    }
-
-    if (calendar.data.quadrate.length > 0) {
-      quadrate = calendar.data.quadrate.map((item: any) => {
-        return {
-          title: item.title,
-          start: moment(item.date).utc().format('YYYY-MM-DD'),
-          end: moment(item.date).utc().format('YYYY-MM-DD'),
-          description: 'Cuadrado',
-          count: item.count,
-          bgcolor: '#d6eae8',
-          color: '#238f51',
-          type: 'quadrate',
-          seeDay: false,
-          seeCount: count,
-        };
-      });
-    }
-
-    eventsResult = pendingIncome.concat(pending).concat(quadrate);
-    setEvents(eventsResult);
-  };
-
   useEffect(() => {
-    //Calendar
-    setDataCalendar(terminalCalendarMock, true);
-    //Sidebar
-    const result: any = allLocalMock;
-    setAllLocal(result.data.results);
+    const result: any = menuMock;
+    setMenu(result.data.results);
+
+    const resultData: any = tableDataMock;
+    setTableData(resultData.data.results);
+
+    const headerData: any = headerBoletasMock;
+    console.log(headerData.data.results);
+    setHeaderBoletas(headerData.data.results);
   }, []);
 
   return (
@@ -209,12 +36,12 @@ export const Terminal = () => {
       <header className="terminal--page-title p-1 pb-0">
         <div className="flex-container flex--spaceBetween">
           <div className="flex-item flex-item__18 mb-0 mr-0">
-            <h1>Estado de Terminales</h1>
+            <h1>Libro Ventas</h1>
             <nav className="breadcrumbs mt-1">
               <a href="#">
-                Iincio <span className="icofont-simple-right"></span>
+                Inicio <span className="icofont-simple-right"></span>
               </a>
-              <span className="breadcrumbs active">Estado de Terminales</span>
+              <span className="breadcrumbs active">Libro Ventas</span>
             </nav>
           </div>
         </div>
@@ -222,137 +49,157 @@ export const Terminal = () => {
       <section className="animate__animated animate__fast animate__fadeIn">
         <section className="terminal--filter m-1">
           <fieldset className="flex-container mb-1">
-            <legend>Filtro</legend>
+            <legend>Filtros</legend>
             <div className="flex-item flex-item__3 mb-0">
               <span className="label-input">Locales</span>
-              <select name="local" onChange={handleInputChangeLocal}>
+              <select
+                name="local"
+                onChange={() => {
+                  console.log('a');
+                }}>
                 <option value="all">Todos</option>
                 <option value="arica">Expo Arica</option>
               </select>
             </div>
-            <div className="flex-item flex-item__3 mb-0">
-              <span className="label-input">Estado</span>
-              <select name="local" onChange={handleInputChangeState}>
-                <option value="all">Todos</option>
-                <option value="pending">Pendiente</option>
-                <option value="pendingIncome">Pendiente Recaudación</option>
-                <option value="quadrate">Cuadrado</option>
-              </select>
-            </div>
+
             <div className="flex-item flex-item__3 mb-0">
               <span className="label-input">Fecha</span>
               <DatePicker maxDetail="year" onChange={handleDate} value={date} />
             </div>
           </fieldset>
           <section className="flex-container">
-            <div className="flex-container flex--center flex-item--top sidebar">
-              <div className="flex-item mr-0 mb-0">
-                <div className="btn-group">
-                  {/* Todos los locales */}
-
-                  {/* Detalle por local */}
-                  {allLocal.length > 0 && (
-                    <>
-                      <fieldset className="flex-container mb-1 mr-1 items-center">
-                        <span className="flex-item label-input py-4 px-0 m-0">
-                          Todos los locales
-                        </span>
-                      </fieldset>
-
-                      <div className="listing-buttons">
-                        {allLocal.length > 0 &&
-                          allLocal.map((data: any, i: any) => (
-                            <button
-                              key={i + 1}
-                              className="flex-item_19 btn mb-0 w-11/12 terminal"
-                              onClick={() => allLocalClick(data.local)}>
-                              <span className="flex-item left">
-                                {data.local}
-                              </span>
-                              <div>
-                                {data.pendingIncome && (
-                                  <span className="right flex-item count text-sm pendingIncome circle">
-                                  </span>
-                                )}
-                                {data.pending && (
-                                  <span className="right flex-item count text-sm pending circle">
-                                  </span>
-                                )}
-                                {data.quadrate && (
-                                  <span className="right flex-item count text-sm quadrate circle">
-                                  </span>
-                                )}
-                              </div>
-                            </button>
+            <div className="flex-item  flex-item--top flex--right mb-0 mr-0 terminal--tables">
+              
+              <div className="flex justify-start">
+                <div className="flex flex-col w-full">
+                  <ul className="flex  list-none flex-wrap pt-2 p-0 -mb-px  flex-row">
+                    {menu.length > 0 &&
+                      menu.map((data: any, i: any) => (
+                        <li className=" mr-1/10 last:mr-0  text-center" key={i}>
+                          <a
+                            className={`text-l font-bold uppercase px-4 py-4 rounded block leading-normal   ${
+                              i === 0
+                                ? 'bg-blue-300 active-tab shadow-md '
+                                : 'bg-gray-200 tab'
+                            }`}>
+                            {data.menu}
+                          </a>
+                        </li>
+                      ))}
+                  </ul>
+                  <div className="flex justify-start max-h-screen">
+                    <div className="flex justify-between py-12 pl-6   table-container  ">
+                      <table className="m-0 ">
+                        <thead>
+                          <tr>
+                            {headerBoletas.mainHeaders &&
+                              headerBoletas.mainHeaders.length > 0 &&
+                              headerBoletas.mainHeaders.map(
+                                (item: any, i: any) => (
+                                  <th colSpan={item.colspan} key={i}>
+                                    {item.title}
+                                  </th>
+                                )
+                              )}
+                          </tr>
+                          <tr>
+                            {headerBoletas.secondaryHeaders &&
+                              headerBoletas.secondaryHeaders.length > 0 &&
+                              headerBoletas.secondaryHeaders.map(
+                                (item: any, i: any) => (
+                                  <th scope="col" key={i}>
+                                    {item.title}
+                                  </th>
+                                )
+                              )}
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {tableData.map((data: any, i: any) => (
+                            <>
+                              <tr>
+                                <td>{data.terminal}</td>
+                                <td>{data.rollNumber}</td>
+                                <td>{data.counter.start}</td>
+                                <td>{data.counter.end}</td>
+                                <td>{data.invoices.start}</td>
+                                <td>{data.invoices.end}</td>
+                                <td>{data.invoices.quantity}</td>
+                                <td>{data.totalSales.tax}</td>
+                                <td>{data.totalSales.otherTax}</td>
+                                <td>{data.totalSalesTerc}</td>
+                                <td>{data.totalSalesExempt}</td>
+                                <td>{data.zzzAmount}</td>
+                                <td>{data.difference}</td>
+                              </tr>
+                            </>
                           ))}
+                        </tbody>
+                      </table>
+                      <div
+                        className="flex justify-center items-center w-20 toggle-arrow"
+                        onClick={() => setToggle(!toggle)}>
+                        {toggle ? (
+                          <span className="icofont-arrow-right text-4xl"></span>
+                        ) : (
+                          <span className="icofont-arrow-left text-4xl"></span>
+                        )}
                       </div>
-                    </>
-                  )}
-
-                  {/* Detalle por local */}
-                  {allTerminal.length > 0 && (
-                    <>
-                      <fieldset className="flex-container mb-1 mr-1 items-center">
-                        <span className="flex-item label-input py-4 px-0 m-0">
-                          Local {local}
-                        </span>
-                        <button
-                          className="btn btn-small btn-secondary float-right m-0"
-                          onClick={() => handleLocal('all')}>
-                          <span className="icofont-exit"></span>Volver
-                        </button>
-                      </fieldset>
-                      <div className="listing-buttons">
-                        {allTerminal.length > 0 &&
-                          allTerminal.map((data: any, i: any) => (
-                            <button
-                              className="flex-item_19 btn mb-0 w-11/12 terminal"
-                              key={i + 1}
-                              onClick={() =>
-                                terminalDetailClick(data.terminal, data.status)
-                              }>
-                              <span className="flex-item left">
-                                {data.terminal}
-                              </span>
-                              <span
-                                className={`right flex-item count text-sm ${data.status}`}></span>
-                            </button>
-                          ))}
+                    </div>
+                    <div
+                      className={`toggle-sidebar mx-4 animate__animated  ${
+                        toggle
+                          ? 'animate__bounceInRight block'
+                          : ' animate__bounceOutRight hidden'
+                      } `}>
+                      <ul className="flex  list-none flex-wrap  p-0 -mb-px  flex-row">
+                        <li className=" mr-1/10 last:mr-0  text-center">
+                          <a
+                            className={`text-l font-bold uppercase px-2 py-4 rounded block leading-normal bg-gray-200 active-tab
+                            `}>
+                            Total general
+                          </a>
+                        </li>
+                        <li className=" mr-1/10 last:mr-0  text-center">
+                          <a
+                            className={`text-l font-bold uppercase px-2 py-4 rounded block leading-normal bg-gray-200 tab
+                            `}>
+                            Iva Terceros
+                          </a>
+                        </li>
+                      </ul>
+                      <div className="py-8 pl-8 flex flex-col">
+                        <div className="flex-item py-4">
+                          <h5 className="text-xl">+ Total Venta Dia</h5>
+                          <p>Cantidad: 20981</p>
+                          <p>Neto: 281</p>
+                          <p>Iva: 201</p>
+                          <p>Otros Impuestos: 0</p>
+                          <p>Total: 2181</p>
+                        </div>
+                        <div className="flex-item py-4">
+                          <h5 className="text-xl">
+                            + Total Arrastre Dias Anteriores
+                          </h5>
+                          <p>Cantidad: 20981</p>
+                          <p>Neto: 281</p>
+                          <p>Iva: 201</p>
+                          <p>Otros Impuestos: 0</p>
+                          <p>Total: 2181</p>
+                        </div>
+                        <div className="flex-item py-4">
+                          <h5 className="text-xl">+ Total Acumulado Al Dia</h5>
+                          <p>Cantidad: 20981</p>
+                          <p>Neto: 281</p>
+                          <p>Iva: 201</p>
+                          <p>Otros Impuestos: 0</p>
+                          <p>Total: 2181</p>
+                        </div>
                       </div>
-                    </>
-                  )}
-
-                  {/* Detalle por terminal */}
-                  {terminal.show && (
-                    <>
-                      <fieldset className="flex-container mb-1 mr-1 items-center">
-                        <span className="flex-item label-input py-4 px-0 m-0">
-                        Local {local}
-                        </span>
-                        <button
-                          className="btn btn-small btn-secondary float-right m-0"
-                          onClick={() => allLocalClick(local)}>
-                          <span className="icofont-exit"></span>Volver
-                        </button>
-                      </fieldset>
-                      <button className="flex-item_19 btn mb-0 w-11/12 terminal terminal-detail">
-                        <span className="flex-item left">
-                          {terminal.terminal}
-                        </span>
-                        <span
-                          className={`right flex-item count text-sm ${terminal.status}`}></span>
-                      </button>
-                    </>
-                  )}
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className="flex-item  flex-item--top flex--right mb-0 mr-0">
-              <TerminalCalendar
-                onSelectEvent={onSelectEvent}
-                date={date}
-                events={events}
-              />
             </div>
           </section>
         </section>

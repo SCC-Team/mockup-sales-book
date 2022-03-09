@@ -1,0 +1,259 @@
+{
+    "data": {
+        "results": [
+            {
+                "terminal": 25,
+                "rollNumber": 0,
+                "counter": {
+                    "start": 1047,
+                    "end": 0
+                },
+                "invoices": {
+                    "start": 1047092910,
+                    "end": 1047092919,
+                    "quantity": 9
+                },
+                "totalSales": {
+                    "tax": 65739039,
+                    "otherTax": 0
+                },
+                "totalSalesTerc": 0,
+                "totalSalesExempt": 0,
+                "zzzAmount": 6000,
+                "difference": 0
+            },
+            {
+                "terminal": 19,
+                "rollNumber": 0,
+                "counter": {
+                    "start": 1047,
+                    "end": 0
+                },
+                "invoices": {
+                    "start": 1047092910,
+                    "end": 1047092919,
+                    "quantity": 500
+                },
+                "totalSales": {
+                    "tax": 65739039,
+                    "otherTax": 0
+                },
+                "totalSalesTerc": 0,
+                "totalSalesExempt": 0,
+                "zzzAmount": 6000,
+                "difference": 0
+            },
+            {
+                "terminal": 1,
+                "rollNumber": 0,
+                "counter": {
+                    "start": 1047,
+                    "end": 0
+                },
+                "invoices": {
+                    "start": 1047092910,
+                    "end": 1047092919,
+                    "quantity": 9
+                },
+                "totalSales": {
+                    "tax": 65739039,
+                    "otherTax": 0
+                },
+                "totalSalesTerc": 0,
+                "totalSalesExempt": 0,
+                "zzzAmount": 6000,
+                "difference": 0
+            },
+            {
+                "terminal": 32,
+                "rollNumber": 0,
+                "counter": {
+                    "start": 1047,
+                    "end": 0
+                },
+                "invoices": {
+                    "start": 1047092910,
+                    "end": 1047092919,
+                    "quantity": 9
+                },
+                "totalSales": {
+                    "tax": 65739039,
+                    "otherTax": 0
+                },
+                "totalSalesTerc": 0,
+                "totalSalesExempt": 0,
+                "zzzAmount": 6000,
+                "difference": 0
+            },
+            {
+                "terminal": 115,
+                "rollNumber": 0,
+                "counter": {
+                    "start": 1047,
+                    "end": 0
+                },
+                "invoices": {
+                    "start": 1047092910,
+                    "end": 1047092919,
+                    "quantity": 9
+                },
+                "totalSales": {
+                    "tax": 65739039,
+                    "otherTax": 0
+                },
+                "totalSalesTerc": 0,
+                "totalSalesExempt": 0,
+                "zzzAmount": 6000,
+                "difference": 0
+            },
+            {
+                "terminal": 203,
+                "rollNumber": 0,
+                "counter": {
+                    "start": 1047,
+                    "end": 0
+                },
+                "invoices": {
+                    "start": 1047092910,
+                    "end": 1047092919,
+                    "quantity": 9
+                },
+                "totalSales": {
+                    "tax": 65739039,
+                    "otherTax": 0
+                },
+                "totalSalesTerc": 0,
+                "totalSalesExempt": 0,
+                "zzzAmount": 6000,
+                "difference": 0
+            },
+            {
+                "terminal": 25,
+                "rollNumber": 0,
+                "counter": {
+                    "start": 1047,
+                    "end": 0
+                },
+                "invoices": {
+                    "start": 1047092910,
+                    "end": 1047092919,
+                    "quantity": 9
+                },
+                "totalSales": {
+                    "tax": 65739039,
+                    "otherTax": 0
+                },
+                "totalSalesTerc": 0,
+                "totalSalesExempt": 0,
+                "zzzAmount": 6000,
+                "difference": 0
+            },
+            {
+                "terminal": 25,
+                "rollNumber": 0,
+                "counter": {
+                    "start": 1047,
+                    "end": 0
+                },
+                "invoices": {
+                    "start": 1047092910,
+                    "end": 1047092919,
+                    "quantity": 9
+                },
+                "totalSales": {
+                    "tax": 65739039,
+                    "otherTax": 0
+                },
+                "totalSalesTerc": 0,
+                "totalSalesExempt": 0,
+                "zzzAmount": 6000,
+                "difference": 0
+            },
+            {
+                "terminal": 25,
+                "rollNumber": 0,
+                "counter": {
+                    "start": 1047,
+                    "end": 0
+                },
+                "invoices": {
+                    "start": 1047092910,
+                    "end": 1047092919,
+                    "quantity": 9
+                },
+                "totalSales": {
+                    "tax": 65739039,
+                    "otherTax": 0
+                },
+                "totalSalesTerc": 0,
+                "totalSalesExempt": 0,
+                "zzzAmount": 6000,
+                "difference": 0
+            },
+            {
+                "terminal": 25,
+                "rollNumber": 0,
+                "counter": {
+                    "start": 1047,
+                    "end": 0
+                },
+                "invoices": {
+                    "start": 1047092910,
+                    "end": 1047092919,
+                    "quantity": 9
+                },
+                "totalSales": {
+                    "tax": 65739039,
+                    "otherTax": 0
+                },
+                "totalSalesTerc": 0,
+                "totalSalesExempt": 0,
+                "zzzAmount": 6000,
+                "difference": 0
+            },
+            {
+                "terminal": 25,
+                "rollNumber": 0,
+                "counter": {
+                    "start": 1047,
+                    "end": 0
+                },
+                "invoices": {
+                    "start": 1047092910,
+                    "end": 1047092919,
+                    "quantity": 9
+                },
+                "totalSales": {
+                    "tax": 65739039,
+                    "otherTax": 0
+                },
+                "totalSalesTerc": 0,
+                "totalSalesExempt": 0,
+                "zzzAmount": 6000,
+                "difference": 0
+            },
+            {
+                "terminal": 25,
+                "rollNumber": 0,
+                "counter": {
+                    "start": 1047,
+                    "end": 0
+                },
+                "invoices": {
+                    "start": 1047092910,
+                    "end": 1047092919,
+                    "quantity": 9
+                },
+                "totalSales": {
+                    "tax": 65739039,
+                    "otherTax": 0
+                },
+                "totalSalesTerc": 0,
+                "totalSalesExempt": 0,
+                "zzzAmount": 6000,
+                "difference": 0
+            }
+            
+        ]
+    }
+}

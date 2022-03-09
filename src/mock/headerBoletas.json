@@ -1,0 +1,87 @@
+{
+    "data": {
+        "results":{
+            "mainHeaders": [
+                {
+                    "title": "Numero Terminal",
+                    "colspan": 1
+                },
+                {
+                    "title": "Numero Rollo",
+                    "colspan": 1
+                },
+                {
+                    "title": "Contador",
+                    "colspan": 2
+                },
+                {
+                    "title": "Boletas",
+                    "colspan": 3
+                },
+                {
+                    "title": "Total Venta Afecta",
+                    "colspan": 2
+                },
+                {
+                    "title": "Total",
+                    "colspan": 1
+                },
+                {
+                    "title": "Total",
+                    "colspan": 1
+                },
+                {
+                    "title": "Monto ZZZ",
+                    "colspan": 1
+                },
+                {
+                    "title": "Diferencia",
+                    "colspan": 1
+                }
+                
+               
+            ],
+            "secondaryHeaders": [
+                {
+                    "title": ""
+                },
+                {
+                    "title": ""
+                },
+                {
+                    "title": "Inicio"
+                },
+                {
+                    "title": "Fin"
+                },
+                {
+                    "title": "Del"
+                },
+                {
+                    "title": "Al"
+                },
+                {
+                    "title": "Cant"
+                },
+                {
+                    "title": "Solo IVA"
+                },
+                {
+                    "title": "Otros Imp"
+                },
+                {
+                    "title": "Venta Terc"
+                },
+                {
+                    "title": "Venta Exenta"
+                },
+                {
+                    "title": ""
+                },
+                {
+                    "title": ""
+                }
+            ]
+        } 
+    }
+}
