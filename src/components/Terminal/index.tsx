@@ -146,7 +146,7 @@ export const Terminal = ({handleRender}: any) => {
           title: item.title,
           start: moment(item.date).utc().format('YYYY-MM-DD'),
           end: moment(item.date).utc().format('YYYY-MM-DD'),
-          description: '',
+          description: 'Descuadrado',
           bgcolor: '#ffe6ee',
           color: '#ee0c64',
           type: 'pending',
@@ -161,7 +161,7 @@ export const Terminal = ({handleRender}: any) => {
           title: item.title,
           start: moment(item.date).utc().format('YYYY-MM-DD'),
           end: moment(item.date).utc().format('YYYY-MM-DD'),
-          description: '',
+          description: 'Cuadrado',
           bgcolor: '#d6eae8',
           color: '#238f51',
           type: 'quadrate',
@@ -216,7 +216,7 @@ export const Terminal = ({handleRender}: any) => {
               <DatePicker maxDetail="year" onChange={handleDate} value={date} />
             </div>
           </fieldset>
-          <button className="btn btn-secondary btn-small my-2"><span className='icofont-arrow-left'/>Volver</button>
+          <button className="btn btn-secondary btn-small my-2" onClick={handleRender}><span className='icofont-arrow-left'/>Volver</button>
           <section className="flex-container">
             
             <div className="flex-container flex--center flex-item--top sidebar">

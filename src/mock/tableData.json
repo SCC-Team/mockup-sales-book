@@ -20,7 +20,8 @@
                 "totalSalesTerc": 0,
                 "totalSalesExempt": 0,
                 "zzzAmount": 6000,
-                "difference": 0
+                "difference": 0,
+                "state": "Descuadrado"
             },
             {
                 "terminal": 19,
@@ -41,7 +42,8 @@
                 "totalSalesTerc": 0,
                 "totalSalesExempt": 0,
                 "zzzAmount": 6000,
-                "difference": 0
+                "difference": 0,
+                "state": "Descuadrado"
             },
             {
                 "terminal": 1,
@@ -62,7 +64,8 @@
                 "totalSalesTerc": 0,
                 "totalSalesExempt": 0,
                 "zzzAmount": 6000,
-                "difference": 0
+                "difference": 0,
+                "state": "Cuadrado"
             },
             {
                 "terminal": 32,
@@ -83,7 +86,8 @@
                 "totalSalesTerc": 0,
                 "totalSalesExempt": 0,
                 "zzzAmount": 6000,
-                "difference": 0
+                "difference": 0,
+                "state": "Cuadrado"
             },
             {
                 "terminal": 115,
@@ -104,7 +108,8 @@
                 "totalSalesTerc": 0,
                 "totalSalesExempt": 0,
                 "zzzAmount": 6000,
-                "difference": 0
+                "difference": 0,
+                "state": "Sin ZZ"
             },
             {
                 "terminal": 203,
@@ -125,7 +130,8 @@
                 "totalSalesTerc": 0,
                 "totalSalesExempt": 0,
                 "zzzAmount": 6000,
-                "difference": 0
+                "difference": 0,
+                "state": "Cuadrado"
             },
             {
                 "terminal": 25,
@@ -146,7 +152,8 @@
                 "totalSalesTerc": 0,
                 "totalSalesExempt": 0,
                 "zzzAmount": 6000,
-                "difference": 0
+                "difference": 0,
+                "state": "Cuadrado"
             },
             {
                 "terminal": 25,
@@ -167,7 +174,8 @@
                 "totalSalesTerc": 0,
                 "totalSalesExempt": 0,
                 "zzzAmount": 6000,
-                "difference": 0
+                "difference": 0,
+                "state": "Cuadrado"
             },
             {
                 "terminal": 25,
@@ -188,7 +196,8 @@
                 "totalSalesTerc": 0,
                 "totalSalesExempt": 0,
                 "zzzAmount": 6000,
-                "difference": 0
+                "difference": 0,
+                "state": "Sin ZZ"
             },
             {
                 "terminal": 25,
@@ -209,7 +218,8 @@
                 "totalSalesTerc": 0,
                 "totalSalesExempt": 0,
                 "zzzAmount": 6000,
-                "difference": 0
+                "difference": 0,
+                "state": "Sin ZZ"
             },
             {
                 "terminal": 25,
@@ -230,7 +240,8 @@
                 "totalSalesTerc": 0,
                 "totalSalesExempt": 0,
                 "zzzAmount": 6000,
-                "difference": 0
+                "difference": 0,
+                "state": "Descuadrado"
             },
             {
                 "terminal": 25,
@@ -251,7 +262,8 @@
                 "totalSalesTerc": 0,
                 "totalSalesExempt": 0,
                 "zzzAmount": 6000,
-                "difference": 0
+                "difference": 0,
+                "state": "Descuadrado"
             }
             
         ]

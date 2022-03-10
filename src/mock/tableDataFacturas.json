@@ -9,7 +9,8 @@
                 "neto": 0,
                 "tax": 0,
                 "otherTax": 6000,
-                "total": 0
+                "total": 0,
+                "state": "Descuadrado"
             },
             {
                 "terminal": 25,
@@ -19,7 +20,8 @@
                 "neto": 0,
                 "tax": 0,
                 "otherTax": 6000,
-                "total": 0
+                "total": 0,
+                "state": "Cuadrado"
             },
             {
                 "terminal": 25,
@@ -29,7 +31,8 @@
                 "neto": 0,
                 "tax": 0,
                 "otherTax": 6000,
-                "total": 0
+                "total": 0,
+                "state": "Sin ZZ"
             },
             {
                 "terminal": 25,
@@ -39,7 +42,8 @@
                 "neto": 0,
                 "tax": 0,
                 "otherTax": 6000,
-                "total": 0
+                "total": 0,
+                "state": "Sin ZZ"
             },
             {
                 "terminal": 25,
@@ -49,7 +53,8 @@
                 "neto": 0,
                 "tax": 0,
                 "otherTax": 6000,
-                "total": 0
+                "total": 0,
+                "state": "Cuadrado"
             },
             {
                 "terminal": 25,
@@ -59,7 +64,8 @@
                 "neto": 0,
                 "tax": 0,
                 "otherTax": 6000,
-                "total": 0
+                "total": 0,
+                "state": "Sin ZZ"
             },
             {
                 "terminal": 25,
@@ -69,7 +75,8 @@
                 "neto": 0,
                 "tax": 0,
                 "otherTax": 6000,
-                "total": 0
+                "total": 0,
+                "state": "Descuadrado"
             },
             {
                 "terminal": 25,
@@ -79,7 +86,8 @@
                 "neto": 0,
                 "tax": 0,
                 "otherTax": 6000,
-                "total": 0
+                "total": 0,
+                "state": "Cuadrado"
             }
         ]
     }

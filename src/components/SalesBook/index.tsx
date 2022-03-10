@@ -79,15 +79,11 @@ export const SalesBook = ({handleRender}: any) => {
               <span className="label-input">Fecha</span>
               <DatePicker onChange={handleDate} value={date} />
             </div>
-            <div
-              className="flex-item flex-item__1 mb-0 mt-2 mr-0"
-              onClick={() => {
-                console.log('a');
-              }}>
-              <span className={`icofont-ui-press fs-3`}></span>
-            </div>
+           
           </fieldset>
+          <button className='btn  btn-secondary btn-small my-2' onClick={handleRender}>Ver estado Libro de Ventas</button>
           <section className="flex-container">
+            
             <div className="flex-item  flex-item--top flex--right mb-0 mr-0 terminal--tables">
               <div className="flex justify-start">
                 <div className="flex flex-col w-full">
@@ -166,6 +162,16 @@ export const SalesBook = ({handleRender}: any) => {
                                     <td>{data.totalSalesExempt}</td>
                                     <td>{data.zzzAmount}</td>
                                     <td>{data.difference}</td>
+                                    <td
+                                      className={`${
+                                        data.state === 'Cuadrado'
+                                          ? 'cuadrado'
+                                          : data.state === 'Descuadrado'
+                                          ? 'descuadrado'
+                                          : 'zz'
+                                      }`}>
+                                      {data.state}
+                                    </td>
                                   </tr>
                                 </>
                               ))}
@@ -183,6 +189,16 @@ export const SalesBook = ({handleRender}: any) => {
                                     <td>{data.tax}</td>
                                     <td>{data.otherTax}</td>
                                     <td>{data.total}</td>
+                                    <td
+                                      className={`${
+                                        data.state === 'Cuadrado'
+                                          ? 'cuadrado'
+                                          : data.state === 'Descuadrado'
+                                          ? 'descuadrado'
+                                          : 'zz'
+                                      }`}>
+                                      {data.state}
+                                    </td>
                                   </tr>
                                 </>
                               ))}
@@ -205,6 +221,7 @@ export const SalesBook = ({handleRender}: any) => {
                               <th>0</th>
                               <th>0</th>
                               <th>0</th>
+                              <th></th>
                             </tr>
                           </thead>
                         ) : (
@@ -218,6 +235,7 @@ export const SalesBook = ({handleRender}: any) => {
                               <th>0</th>
                               <th>0</th>
                               <th>0</th>
+                              <th></th>
                             </tr>
                           </thead>
                         )}

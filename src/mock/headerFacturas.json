@@ -33,6 +33,10 @@
                 {
                     "title": "Total",
                     "colspan": 1
+                },
+                {
+                    "title": "Estado",
+                    "colspan": 1
                 }
             ],
             "totalTabsFacturas": [{
