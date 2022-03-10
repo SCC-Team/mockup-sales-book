@@ -1,0 +1,46 @@
+{
+    "data": {
+        "results": [
+            {
+                "terminal": 19,
+                "status": "pendingIncome"
+            },
+            {
+                "terminal": 3802,
+                "status": "pendingIncome"
+            },
+            {
+                "terminal": 3805,
+                "status": "pendingIncome"
+            },
+            {
+                "terminal": 3808,
+                "status": "pendingIncome"
+            },
+            {
+                "terminal": 3811,
+                "status": "pendingIncome"
+            },
+            {
+                "terminal": 3814,
+                "status": "pendingIncome"
+            },
+            {
+                "terminal": 3817,
+                "status": "pendingIncome"
+            },
+            {
+                "terminal": 3820,
+                "status": "pendingIncome"
+            },
+            {
+                "terminal": 3823,
+                "status": "pendingIncome"
+            },
+            {
+                "terminal": 3826,
+                "status": "pendingIncome"
+            }
+        ]
+    }
+}  

@@ -1,9 +1,15 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {Menu} from '../components/Menu';
 // import {Arching} from '../components/Arching'; //VER PANEL DE ARQUEO
-import {Terminal} from '../components/Terminal'; //VER ESTADO DE TERMINALES
+import {SalesBook} from '../components/SalesBook'; //VER ESTADO DE TERMINALES
+import {Terminal} from '../components/Terminal';
 
 export const Template = () => {
+  const [terminal, setTerminal] = useState(false);
+
+  const handleRender = () => {
+    setTerminal(!terminal);
+  };
   return (
     <div>
       <header className="topheader">
@@ -29,8 +35,11 @@ export const Template = () => {
       </header>
       <section className="routers">
         <Menu />
-        {/* <Arching /> */}
-        <Terminal />
+        {terminal ? (
+          <Terminal handleRender={handleRender} />
+        ) : (
+          <SalesBook handleRender={handleRender} />
+        )}
       </section>
     </div>
   );

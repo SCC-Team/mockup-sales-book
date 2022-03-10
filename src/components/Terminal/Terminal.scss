@@ -1,7 +1,7 @@
 @import '../../sass/abstracts';
 .terminal {
   @include content-2(0, 1rem, 1rem, $grey-ultra-light);
-  .circle {
+  .circle{
     padding: 0.3rem 0.9rem !important;
   }
   &--page-title {
@@ -17,21 +17,6 @@
     }
   }
 
-  &--tables {
-    @include table(
-      0.5rem,
-      $color-text-active,
-      $white,
-      left,
-      left,
-      $color-text,
-      $color-text,
-      $blue-dark,
-      $blue-dark,
-      $white,
-      1rem
-    );
-  }
 
   .count {
     font-size: 1.1rem;
@@ -77,20 +62,15 @@
     width: 20%;
     .btn-group {
       padding: 0;
-
       .left {
         float: left;
       }
       .right {
         float: right;
       }
-
       button {
         padding: 0 1rem;
-        margin: 0;
         line-height: 3rem;
-        border: 0.1rem solid #c7c7c9;
-
         span {
           font-weight: normal;
         }
@@ -140,78 +120,14 @@
           transform: none;
         }
       }
-
-      .listing-buttons {
-        display: flex;
-        flex-direction: column;
+      .listing-buttons{
+        overflow-y: scroll;
+        height: 63rem;
       }
     }
   }
 
-  .btn-small {
+  .btn-small{
     zoom: 80%;
-  }
-
-  .innerTable {
-    width: 50%;
-    margin: 0 auto;
-    padding: 3rem 0;
-  }
-
-  .total-td {
-    background-color: #696969 !important;
-    color: #fff !important
-  }
-
-  .tab {
-    color: #0B59A3;
-    background-color: #f9f9f9;
-    border-bottom: 0.1rem solid #c7c7c9;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-    &:hover {
-      background-color: #ddeefe;
-      cursor: pointer;
-    }
-  }
-
-  .table-container {
-    width: 100%;
-    border-radius: 0.3rem;
-    overflow-x: auto;
-    border: 0.1rem solid #c7c7c9;
-    transition: width 2s;
-  }
-
-  .toggle-arrow {
-    border: 0.1rem solid #c7c7c9;
-    cursor: pointer;
-  }
-
-  .toggle-sidebar {
-    width: 18%;
-    background-color: #f9f9f9;
-    border: 0.1rem solid #c7c7c9;
-  }
-
-  .active-tab {
-    color: #454951;
-    background-color: #FEDB00;
-    border: 0.1rem solid #c7c7c9;
-    border-bottom: none;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-  }
-
-  table {
-    thead {
-      
-      tr {
-        
-        th {
-          text-align: center;
-        }
-      }
-    }
   }
 }

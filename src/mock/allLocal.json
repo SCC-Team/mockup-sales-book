@@ -1,0 +1,166 @@
+{
+    "data": {
+        "results": [
+            {
+                "local": "Expo Arica",
+                "pending": 20
+            },
+            {
+                "local": "Expo Valdivia",
+                "quadrate": 20
+            },
+            {
+                "local": "Rosas",
+                "quadrate": 20
+            },
+            {
+                "local": "Salon Peluquería",
+                "pendingIncome": 20
+            },
+            {
+                "local": "Sodimac",
+                "quadrate": 20
+            },
+            {
+                "local": "Calama",
+                "quadrate": 20
+            },
+            {
+                "local": "Chuquicamata",
+                "quadrate": 20
+            },
+            {
+                "local": "Calama Centro",
+                "pending": 20
+            },
+            {
+                "local": "Damas",
+                "pending": 20
+            },
+            {
+                "local": "Lyon",
+                "pendingIncome": 20
+            },
+            {
+                "local": "Expo Lyon",
+                "pendingIncome": 20
+            },
+            {
+                "local": "Rincón Juvenil",
+                "pendingIncome": 20
+            },
+            {
+                "local": "Electro Hogar",
+                "quadrate": 20
+            },
+            {
+                "local": "Ahumada",
+                "quadrate": 20
+            },
+            {
+                "local": "Casa Matriz",
+                "pendingIncome": 20
+            },
+            {
+                "local": "Ahumada 242",
+                "pendingIncome": 20
+            },
+            {
+                "local": "Ahumada 342",
+                "pendingIncome": 20
+            },
+            {
+                "local": "Puerto Montt",
+                "pendingIncome": 20
+            },
+            {
+                "local": "Castro",
+                "pending": 20
+            },
+            {
+                "local": "Puerto Montt",
+                "pending": 20
+            },
+            {
+                "local": "Expo Arica",
+                "pending": 20
+            },
+            {
+                "local": "Expo Valdivia",
+                "quadrate": 20
+            },
+            {
+                "local": "Rosas",
+                "quadrate": 20
+            },
+            {
+                "local": "Salon Peluquería",
+                "quadrate": 20
+            },
+            {
+                "local": "Sodimac",
+                "quadrate": 20
+            },
+            {
+                "local": "Calama",
+                "quadrate": 20
+            },
+            {
+                "local": "Chuquicamata",
+                "quadrate": 20
+            },
+            {
+                "local": "Calama Centro",
+                "quadrate": 20
+            },
+            {
+                "local": "Damas",
+                "quadrate": 20
+            },
+            {
+                "local": "Lyon",
+                "quadrate": 20
+            },
+            {
+                "local": "Expo Lyon",
+                "quadrate": 20
+            },
+            {
+                "local": "Rincón Juvenil",
+                "quadrate": 20
+            },
+            {
+                "local": "Electro Hogar",
+                "quadrate": 20
+            },
+            {
+                "local": "Ahumada",
+                "quadrate": 20
+            },
+            {
+                "local": "Casa Matriz",
+                "quadrate": 20
+            },
+            {
+                "local": "Ahumada 242",
+                "quadrate": 20
+            },
+            {
+                "local": "Ahumada 342",
+                "quadrate": 20
+            },
+            {
+                "local": "Puerto Montt",
+                "quadrate": 20
+            },
+            {
+                "local": "Castro",
+                "quadrate": 20
+            },
+            {
+                "local": "Puerto Montt",
+                "quadrate": 20
+            }
+        ]
+    }
+}

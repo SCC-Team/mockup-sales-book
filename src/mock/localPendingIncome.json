@@ -1,0 +1,38 @@
+{
+    "data": {
+        "results": [
+            {
+                "local": "Salon Peluquería",
+                "pendingIncome": 20
+            },
+            {
+                "local": "Lyon",
+                "pendingIncome": 20
+            },
+            {
+                "local": "Expo Lyon",
+                "pendingIncome": 20
+            },
+            {
+                "local": "Rincón Juvenil",
+                "pendingIncome": 20
+            },
+            {
+                "local": "Casa Matriz",
+                "pendingIncome": 20
+            },
+            {
+                "local": "Ahumada 242",
+                "pendingIncome": 20
+            },
+            {
+                "local": "Ahumada 342",
+                "pendingIncome": 20
+            },
+            {
+                "local": "Puerto Montt",
+                "pendingIncome": 20
+            }
+        ]
+    }
+}

@@ -1,0 +1,46 @@
+{
+    "data": {
+        "results": [
+            {
+                "terminal": 3801,
+                "status": "quadrate"
+            },
+            {
+                "terminal": 3804,
+                "status": "quadrate"
+            },
+            {
+                "terminal": 3807,
+                "status": "quadrate"
+            },
+            {
+                "terminal": 3810,
+                "status": "quadrate"
+            },
+            {
+                "terminal": 3813,
+                "status": "quadrate"
+            },
+            {
+                "terminal": 3816,
+                "status": "quadrate"
+            },
+            {
+                "terminal": 3819,
+                "status": "quadrate"
+            },
+            {
+                "terminal": 3822,
+                "status": "quadrate"
+            },
+            {
+                "terminal": 3825,
+                "status": "quadrate"
+            },
+            {
+                "terminal": 3828,
+                "status": "quadrate"
+            }
+        ]
+    }
+}  

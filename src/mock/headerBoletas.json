@@ -81,7 +81,93 @@
                 {
                     "title": ""
                 }
-            ]
+            ],
+            "totalTabs": [{
+                "title": "Total General"
+            }],
+            "totalFacturas": [
+                {
+                    "group": "Total Venta Dia",
+                    
+                    "important": true,
+                    "detail": [
+                        {
+                            "key": "Cantidad",
+                            "value": "234359"
+                        },
+                        {
+                            "key": "Neto",
+                            "value": "105000"
+                        },
+                        {
+                            "key": "IVA",
+                            "value": "0"
+                        },
+                        {
+                            "key": "Otros Impuestos",
+                            "value": "0"
+                        },
+                        {
+                            "key": "Total",
+                            "value": "0"
+                        }
+                        
+                    ]
+                },
+                {
+                    "group": "Total Arrastre Dias Anteriores",
+                    
+                    "important": true,
+                    "detail": [
+                        {
+                            "key": "Cantidad",
+                            "value": "234359"
+                        },
+                        {
+                            "key": "Neto",
+                            "value": "105000"
+                        },
+                        {
+                            "key": "IVA",
+                            "value": "0"
+                        },
+                        {
+                            "key": "Otros Impuestos",
+                            "value": "0"
+                        },
+                        {
+                            "key": "Total",
+                            "value": "0"
+                        }
+                    ]
+                },
+                {
+                    "group": "Total Acumulado Al Dia",
+                    
+                    "important": true,
+                    "detail": [
+                        {
+                            "key": "Cantidad",
+                            "value": "234359"
+                        },
+                        {
+                            "key": "Neto",
+                            "value": "105000"
+                        },
+                        {
+                            "key": "IVA",
+                            "value": "0"
+                        },
+                        {
+                            "key": "Otros Impuestos",
+                            "value": "0"
+                        },
+                        {
+                            "key": "Total",
+                            "value": "0"
+                        }
+                    ]
+                }]
         } 
     }
 }

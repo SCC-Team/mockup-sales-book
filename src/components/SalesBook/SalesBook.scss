@@ -1,0 +1,115 @@
+@import '../../sass/abstracts';
+.terminal {
+  @include content-2(0, 1rem, 1rem, $grey-ultra-light);
+  .circle {
+    padding: 0.3rem 0.9rem !important;
+  }
+  &--page-title {
+    background: scale-color($blue-dark, $lightness: +90%);
+    border-radius: 1rem 1rem 0 0;
+    h1 {
+      font-size: 1.5rem;
+    }
+    & .menu-dropdown {
+      & .btn-white {
+        width: auto !important;
+      }
+    }
+  }
+
+
+  
+
+  .total-td {
+    background-color: #696969 !important;
+    color: #fff !important;
+  }
+
+  .tab {
+    color: #0b59a3;
+    background-color: #e6e6e6;
+    border: none;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    &:hover {
+      background-color: #ddeefe;
+      cursor: pointer;
+    }
+  }
+
+  .tab-small {
+    zoom: 80%;
+  }
+
+  .table-container {
+    width: 100%;
+    border-radius: 0.3rem;
+    overflow-x: auto;
+    border: 0.1rem solid #c7c7c9;
+    transition: width 2s;
+
+    &--tables {
+      @include table(
+        0.5rem,
+        $color-text-active,
+        $white,
+        left,
+        left,
+        $color-text,
+        $color-text,
+        $blue-dark,
+        $blue-dark,
+        $white,
+        1rem
+      );
+    }
+  }
+
+  .toggle-arrow {
+    background-color: #e6e6e6;
+    
+    cursor: pointer;
+  }
+
+  .toggle-sidebar {
+    width: 18%;
+    background-color: #f9f9f9;
+    border: 0.1rem solid #c7c7c9;
+  }
+
+  .active-tab {
+    color: #454951;
+    background-color: #fedb00;
+    border: none;
+    border-bottom: none;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .disabled-tab {
+    color: #454951;
+    border: none;
+    background-color: #e6e6e6;
+    &:hover {
+      background-color: #e6e6e6;
+      cursor: not-allowed;
+    }
+  }
+
+  
+
+  table {
+    thead {
+      tr {
+        th {
+          text-align: center;
+        }
+      }
+    }
+    tbody {
+      tr{
+        td:nth-child()
+      }
+    }
+  }
+}

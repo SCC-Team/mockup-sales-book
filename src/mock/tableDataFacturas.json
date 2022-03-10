@@ -1,0 +1,86 @@
+{
+    "data": {
+        "results": [
+            {
+                "terminal": 25,
+                "docNumber": 0,
+                "rut": "26372819-2",
+                "name": "Mock Enterprise CA",
+                "neto": 0,
+                "tax": 0,
+                "otherTax": 6000,
+                "total": 0
+            },
+            {
+                "terminal": 25,
+                "docNumber": 0,
+                "rut": "26372819-2",
+                "name": "Mock Enterprise CA",
+                "neto": 0,
+                "tax": 0,
+                "otherTax": 6000,
+                "total": 0
+            },
+            {
+                "terminal": 25,
+                "docNumber": 0,
+                "rut": "26372819-2",
+                "name": "Mock Enterprise CA",
+                "neto": 0,
+                "tax": 0,
+                "otherTax": 6000,
+                "total": 0
+            },
+            {
+                "terminal": 25,
+                "docNumber": 0,
+                "rut": "26372819-2",
+                "name": "Mock Enterprise CA",
+                "neto": 0,
+                "tax": 0,
+                "otherTax": 6000,
+                "total": 0
+            },
+            {
+                "terminal": 25,
+                "docNumber": 0,
+                "rut": "26372819-2",
+                "name": "Mock Enterprise CA",
+                "neto": 0,
+                "tax": 0,
+                "otherTax": 6000,
+                "total": 0
+            },
+            {
+                "terminal": 25,
+                "docNumber": 0,
+                "rut": "26372819-2",
+                "name": "Mock Enterprise CA",
+                "neto": 0,
+                "tax": 0,
+                "otherTax": 6000,
+                "total": 0
+            },
+            {
+                "terminal": 25,
+                "docNumber": 0,
+                "rut": "26372819-2",
+                "name": "Mock Enterprise CA",
+                "neto": 0,
+                "tax": 0,
+                "otherTax": 6000,
+                "total": 0
+            },
+            {
+                "terminal": 25,
+                "docNumber": 0,
+                "rut": "26372819-2",
+                "name": "Mock Enterprise CA",
+                "neto": 0,
+                "tax": 0,
+                "otherTax": 6000,
+                "total": 0
+            }
+        ]
+    }
+}

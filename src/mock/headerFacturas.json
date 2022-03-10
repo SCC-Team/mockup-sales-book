@@ -1,0 +1,140 @@
+{
+    "data": {
+        "results":{
+            "mainHeaders": [
+                {
+                    "title": "Numero Terminal",
+                    "colspan": 1
+                },
+                {
+                    "title": "Numero Documento",
+                    "colspan": 1
+                },
+                {
+                    "title": "RUT",
+                    "colspan": 1
+                },
+                {
+                    "title": "Nombre o Razon Social",
+                    "colspan": 1
+                },
+                {
+                    "title": "Neto",
+                    "colspan": 1
+                },
+                {
+                    "title": "IVA",
+                    "colspan": 1
+                },
+                {
+                    "title": "Otros Impuestos",
+                    "colspan": 1
+                },
+                {
+                    "title": "Total",
+                    "colspan": 1
+                }
+            ],
+            "totalTabsFacturas": [{
+                "title": "Total General"
+
+            },{
+                "title": "Iva Terceros"
+
+            }],
+            "totalTabsNC": [{
+                "title": "Total General"
+            },{
+                "title": "Iva Terceros"
+
+            },{
+                "title": "Impuestos no recuperables"
+
+            }],
+            "totalFacturas": [
+                {
+                    "group": "Total Venta Dia",
+                    
+                    "important": true,
+                    "detail": [
+                        {
+                            "key": "Cantidad",
+                            "value": "234359"
+                        },
+                        {
+                            "key": "Neto",
+                            "value": "105000"
+                        },
+                        {
+                            "key": "IVA",
+                            "value": "0"
+                        },
+                        {
+                            "key": "Otros Impuestos",
+                            "value": "0"
+                        },
+                        {
+                            "key": "Total",
+                            "value": "0"
+                        }
+                        
+                    ]
+                },
+                {
+                    "group": "Total Arrastre Dias Anteriores",
+                    
+                    "important": true,
+                    "detail": [
+                        {
+                            "key": "Cantidad",
+                            "value": "234359"
+                        },
+                        {
+                            "key": "Neto",
+                            "value": "105000"
+                        },
+                        {
+                            "key": "IVA",
+                            "value": "0"
+                        },
+                        {
+                            "key": "Otros Impuestos",
+                            "value": "0"
+                        },
+                        {
+                            "key": "Total",
+                            "value": "0"
+                        }
+                    ]
+                },
+                {
+                    "group": "Total Acumulado Al Dia",
+                    
+                    "important": true,
+                    "detail": [
+                        {
+                            "key": "Cantidad",
+                            "value": "234359"
+                        },
+                        {
+                            "key": "Neto",
+                            "value": "105000"
+                        },
+                        {
+                            "key": "IVA",
+                            "value": "0"
+                        },
+                        {
+                            "key": "Otros Impuestos",
+                            "value": "0"
+                        },
+                        {
+                            "key": "Total",
+                            "value": "0"
+                        }
+                    ]
+                }
+            ]
+        } 
+    }
+}
