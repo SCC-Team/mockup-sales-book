@@ -1,7 +1,7 @@
-import React, {useState, useCallback, useEffect} from 'react';
+import React, { useState, useCallback, useEffect } from 'react';
 import DatePicker from 'react-date-picker';
 import moment from 'moment-timezone';
-import {TerminalCalendar} from '@scc/react-big-calendar';
+import { TerminalCalendar } from '@scc/react-big-calendar';
 
 import terminalCalendarMock from './../../mock/terminalCalendar.json';
 import terminalCalendarDetailMock from './../../mock/terminalCalendarDetail.json';
@@ -10,9 +10,7 @@ import terminalCalendarDetailPendingIncomeMock from './../../mock/terminalCalend
 import terminalCalendarDetailquadrateMock from './../../mock/terminalCalendarDetailQuadrate.json';
 import allLocalMock from './../../mock/allLocal.json';
 import allTerminalMock from './../../mock/allTerminal.json';
-import terminalPendingMock from './../../mock/terminalPending.json';
-import terminalPendingIncomeMock from './../../mock/terminalPendingIncome.json';
-import terminalquadrateMock from './../../mock/terminalquadrate.json';
+
 import terminalCalendarquadrateMock from './../../mock/terminalCalendarQuadrate.json';
 import terminalCalendarPendingMock from './../../mock/terminalCalendarPending.json';
 import terminalCalendarPendingIncomeMock from './../../mock/terminalCalendarPendingIncome.json';
@@ -22,7 +20,7 @@ import localquadrateMock from './../../mock/localQuadrate.json';
 
 import './Terminal.scss';
 
-export const Terminal = ({handleRender}: any) => {
+export const Terminal = ({ handleRender }: any) => {
   const [date, setDate] = useState(new Date('Feb 15 2022 15:34:55 GMT-0300'));
   const [events, setEvents] = useState<any>([]);
   const [allLocal, setAllLocal] = useState<any>([]);
@@ -135,11 +133,11 @@ export const Terminal = ({handleRender}: any) => {
   const setDataCalendar = (calendar: any, count: any) => {
     //Calendar
     let eventsResult = [];
-    
+
     let pending = [];
     let quadrate = [];
     // let all = [];
-    
+
     if (calendar.data.pending.length > 0) {
       pending = calendar.data.pending.map((item: any) => {
         return {
@@ -216,9 +214,9 @@ export const Terminal = ({handleRender}: any) => {
               <DatePicker maxDetail="year" onChange={handleDate} value={date} />
             </div>
           </fieldset>
-          <button className="btn btn-secondary btn-small my-2" onClick={handleRender}><span className='icofont-arrow-left'/>Volver</button>
+          <button className="btn btn-secondary btn-small my-2" onClick={handleRender}><span className='icofont-arrow-left' />Volver</button>
           <section className="flex-container">
-            
+
             <div className="flex-container flex--center flex-item--top sidebar">
               <div className="flex-item mr-0 mb-0">
                 <div className="btn-group">
@@ -229,7 +227,7 @@ export const Terminal = ({handleRender}: any) => {
                     <>
                       <fieldset className="flex-container mb-1 mr-1 items-center">
                         <span className="flex-item label-input py-4 px-0 m-0">
-                        Local 1-ROSAS 1665
+                          Local 1-ROSAS 1665
                         </span>
                       </fieldset>
 

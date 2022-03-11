@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import DatePicker from 'react-date-picker';
 
 import menuMock from '../../mock/menu.json';
@@ -8,9 +8,11 @@ import headerBoletasMock from '../../mock/headerBoletas.json';
 import headerFacturasMock from '../../mock/headerFacturas.json';
 
 import './SalesBook.scss';
-import {Accordion} from '../Accordion';
+import { Accordion } from '../Accordion';
+import { Paginate } from '../Pagination';
+import { Searcher } from '../Searcher';
 
-export const SalesBook = ({handleRender}: any) => {
+export const SalesBook = ({ handleRender }: any) => {
   const [date, setDate] = useState(new Date());
   const [menu, setMenu] = useState<any>([]);
   const [tableData, setTableData] = useState<any>([]);
@@ -79,11 +81,11 @@ export const SalesBook = ({handleRender}: any) => {
               <span className="label-input">Fecha</span>
               <DatePicker onChange={handleDate} value={date} />
             </div>
-           
+
           </fieldset>
           <button className='btn  btn-secondary btn-small my-2' onClick={handleRender}>Ver estado Libro de Ventas</button>
           <section className="flex-container">
-            
+
             <div className="flex-item  flex-item--top flex--right mb-0 mr-0 terminal--tables">
               <div className="flex justify-start">
                 <div className="flex flex-col w-full">
@@ -101,23 +103,38 @@ export const SalesBook = ({handleRender}: any) => {
                             setTab(data.menu)
                           }>
                           <a
-                            className={`text-l font-bold uppercase px-4 py-4 rounded block leading-normal   ${
-                              data.menu === tab
-                                ? 'bg-blue-300 active-tab shadow-md '
-                                : 'bg-gray-200 tab'
-                            } ${
-                              (data.menu === 'Guias' ||
+                            className={`text-l font-bold uppercase px-4 py-4 rounded block leading-normal   ${data.menu === tab
+                              ? 'bg-blue-300 active-tab shadow-md '
+                              : 'bg-gray-200 tab'
+                              } ${(data.menu === 'Guias' ||
                                 data.menu === 'Tickets' ||
                                 data.menu === 'Notas de Debitos' ||
                                 data.menu === 'Cuadratura ZZZ' ||
                                 data.menu === 'Detalle por Jerarquia') &&
                               'disabled-tab'
-                            }`}>
+                              }`}>
                             {data.menu}
                           </a>
                         </li>
                       ))}
                   </ul>
+                  <div className='container-header-options'>
+                    <div className='container-paginate'>
+                      <Paginate data={tableData} />
+                    </div>
+                    <Searcher />
+                    <div className="dropdown mt-1 mr-10">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 16 16" version="1.1" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5">
+                        <circle cx="8" cy="2.5" r=".75" />
+                        <circle cx="8" cy="8" r=".75" />
+                        <circle cx="8" cy="13.5" r=".75" />
+                      </svg>
+                      <div className="dropdown-content mt-7 mr-100">
+                        <a href="#">Exportar a Excel</a>
+                      </div>
+                    </div>
+                  </div>
+
                   <div className="flex justify-start max-h-screen">
                     <div className="flex justify-between py-12 pl-6   table-container table-container--tables">
                       <table className="m-0 ">
@@ -163,13 +180,12 @@ export const SalesBook = ({handleRender}: any) => {
                                     <td>{data.zzzAmount}</td>
                                     <td>{data.difference}</td>
                                     <td
-                                      className={`${
-                                        data.state === 'Cuadrado'
-                                          ? 'cuadrado'
-                                          : data.state === 'Descuadrado'
+                                      className={`${data.state === 'Cuadrado'
+                                        ? 'cuadrado'
+                                        : data.state === 'Descuadrado'
                                           ? 'descuadrado'
                                           : 'zz'
-                                      }`}>
+                                        }`}>
                                       {data.state}
                                     </td>
                                   </tr>
@@ -190,13 +206,12 @@ export const SalesBook = ({handleRender}: any) => {
                                     <td>{data.otherTax}</td>
                                     <td>{data.total}</td>
                                     <td
-                                      className={`${
-                                        data.state === 'Cuadrado'
-                                          ? 'cuadrado'
-                                          : data.state === 'Descuadrado'
+                                      className={`${data.state === 'Cuadrado'
+                                        ? 'cuadrado'
+                                        : data.state === 'Descuadrado'
                                           ? 'descuadrado'
                                           : 'zz'
-                                      }`}>
+                                        }`}>
                                       {data.state}
                                     </td>
                                   </tr>
@@ -251,31 +266,29 @@ export const SalesBook = ({handleRender}: any) => {
                       </div>
                     </div>
                     <div
-                      className={`toggle-sidebar mx-4 animate__animated  ${
-                        toggle
-                          ? 'animate__fadeIn block'
-                          : ' animate__fadeOut hidden'
-                      } `}>
+                      className={`toggle-sidebar mx-4 animate__animated  ${toggle
+                        ? 'animate__fadeIn block'
+                        : ' animate__fadeOut hidden'
+                        } `}>
                       <ul className="flex  list-none flex-wrap  p-0 -mb-px  flex-row">
                         {tab === 'Boletas'
                           ? header?.totalTabs?.map((data: any, i: any) => (
-                              <li
-                                className=" mr-1/10 last:mr-0 text-center"
-                                key={i}
-                                onClick={() => setTotalTab(data.title)}>
-                                <a
-                                  className={`text-l font-bold tab-small uppercase px-2 py-4 rounded block leading-normal bg-gray-200 
-                            ${
-                              data.title === totalTab
-                                ? 'bg-blue-300 active-tab shadow-md '
-                                : 'bg-gray-200 tab'
-                            }`}>
-                                  {data.title}
-                                </a>
-                              </li>
-                            ))
+                            <li
+                              className=" mr-1/10 last:mr-0 text-center"
+                              key={i}
+                              onClick={() => setTotalTab(data.title)}>
+                              <a
+                                className={`text-l font-bold tab-small uppercase px-2 py-4 rounded block leading-normal bg-gray-200 
+                            ${data.title === totalTab
+                                    ? 'bg-blue-300 active-tab shadow-md '
+                                    : 'bg-gray-200 tab'
+                                  }`}>
+                                {data.title}
+                              </a>
+                            </li>
+                          ))
                           : tab === 'Facturas'
-                          ? header?.totalTabsFacturas?.map(
+                            ? header?.totalTabsFacturas?.map(
                               (data: any, i: any) => (
                                 <li
                                   className=" mr-1/10 last:mr-0  text-center"
@@ -283,28 +296,26 @@ export const SalesBook = ({handleRender}: any) => {
                                   onClick={() => setTotalTab(data.title)}>
                                   <a
                                     className={`text-l font-bold tab-small uppercase px-2 py-4 rounded block leading-normal bg-gray-200 
-                            ${
-                              data.title === totalTab
-                                ? 'bg-blue-300 active-tab shadow-md '
-                                : 'bg-gray-200 tab'
-                            }`}>
+                            ${data.title === totalTab
+                                        ? 'bg-blue-300 active-tab shadow-md '
+                                        : 'bg-gray-200 tab'
+                                      }`}>
                                     {data.title}
                                   </a>
                                 </li>
                               )
                             )
-                          : header?.totalTabsNC?.map((data: any, i: any) => (
+                            : header?.totalTabsNC?.map((data: any, i: any) => (
                               <li
                                 className=" mr-1/10 last:mr-0  text-center"
                                 key={i}
                                 onClick={() => setTotalTab(data.title)}>
                                 <a
                                   className={`text-l font-bold tab-small uppercase px-2 py-4 rounded block leading-normal bg-gray-200 
-                            ${
-                              data.title === totalTab
-                                ? 'bg-blue-300 active-tab shadow-md '
-                                : 'bg-gray-200 tab'
-                            }`}>
+                            ${data.title === totalTab
+                                      ? 'bg-blue-300 active-tab shadow-md '
+                                      : 'bg-gray-200 tab'
+                                    }`}>
                                   {data.title}
                                 </a>
                               </li>
@@ -321,8 +332,8 @@ export const SalesBook = ({handleRender}: any) => {
               </div>
             </div>
           </section>
-        </section>
-      </section>
-    </article>
+        </section >
+      </section >
+    </article >
   );
 };

@@ -1,0 +1,59 @@
+@import "../../sass/abstracts.scss";
+
+.pagination {
+  margin: 20px 0;
+  border-radius: 4px;
+}
+
+.commentBox {
+  border: 0.1rem solid $color-border;
+  border-radius: 0.3rem;
+  & .pagination {
+    display: flex;
+    list-style: none;
+    margin: 0 !important;
+    padding: 0 !important;
+    li {
+      a {
+        display: inline-table;
+        font-size: 1.4rem;
+        color: $color-text;
+        padding: 0.65rem 1rem;
+
+        cursor: pointer;
+        &:hover {
+          background: scale-color($color-text-active, $lightness: +50%);
+          color: $color-text-hover;
+        }
+      }
+    }
+    & .active {
+      background: $yellow-medium;
+      a {
+        color: $color-text;
+      }
+    }
+  }
+}
+//Huge Screens
+@media only screen and (max-width: 1440px) {
+  .commentBox {
+    & .pagination {
+      li {
+        a {
+          font-size: 1.2rem;
+          padding: 0.5rem 1rem;
+        }
+      }
+    }
+  }
+}
+
+.searchPaginate {
+  max-width: 4rem;
+}
+
+.container-paginate {
+  float: right;
+  margin: 0 50px 10px 0;
+}
