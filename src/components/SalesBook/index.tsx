@@ -11,6 +11,7 @@ import './SalesBook.scss';
 import { Accordion } from '../Accordion';
 import { Paginate } from '../Pagination';
 import { Searcher } from '../Searcher';
+import { KebabMenu } from '../KebabMenu';
 
 export const SalesBook = ({ handleRender }: any) => {
   const [date, setDate] = useState(new Date());
@@ -119,22 +120,16 @@ export const SalesBook = ({ handleRender }: any) => {
                       ))}
                   </ul>
                   <div className='container-header-options'>
-                    <div className='container-paginate'>
+                    <div>
+                      <KebabMenu items={['Exportar a Excel']} />
+                    </div>
+                    <div>
+                      <Searcher />
+                    </div>
+                    <div>
                       <Paginate data={tableData} />
                     </div>
-                    <Searcher />
-                    <div className="dropdown mt-1 mr-10">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 16 16" version="1.1" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5">
-                        <circle cx="8" cy="2.5" r=".75" />
-                        <circle cx="8" cy="8" r=".75" />
-                        <circle cx="8" cy="13.5" r=".75" />
-                      </svg>
-                      <div className="dropdown-content mt-7 mr-100">
-                        <a href="#">Exportar a Excel</a>
-                      </div>
-                    </div>
                   </div>
-
                   <div className="flex justify-start max-h-screen">
                     <div className="flex justify-between py-12 pl-6   table-container table-container--tables">
                       <table className="m-0 ">

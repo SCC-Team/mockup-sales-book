@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import ReactPaginate from 'react-paginate';
+import ReactPaginate from "react-paginate";
 
 import "./Pagination.scss";
 
