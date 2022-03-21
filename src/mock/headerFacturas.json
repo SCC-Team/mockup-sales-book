@@ -3,140 +3,68 @@
         "results":{
             "mainHeaders": [
                 {
-                    "title": "Numero Terminal",
-                    "colspan": 1
+                    "title": "ID",
+                    "colspan": 1,
+                    "active": true,
+                    "col_id": "key"
                 },
                 {
-                    "title": "Numero Documento",
-                    "colspan": 1
+                    "title": "Type",
+                    "colspan": 1,
+                    "active": true,
+                    "col_id": "type"
                 },
                 {
-                    "title": "RUT",
-                    "colspan": 1
+                    "title": "Title",
+                    "colspan": 1,
+                    "active": true,
+                    "col_id": "title"
                 },
                 {
-                    "title": "Nombre o Razon Social",
-                    "colspan": 1
+                    "title": "Publish Year",
+                    "colspan": 1,
+                    "active": true,
+                    "col_id": "first_publish_year"
+                }
+                
+               
+            ],
+            "tableOrder": [
+                {
+                    "title": "terminal",
+                    "active": true
+                },
+                {
+                    "title": "docNumber",
+                    "active": true
+                },
+                {
+                    "title": "rut",
+                    "active": true
+                },
+                {
+                    "title": "name",
+                    "active": false
                 },
                 {
                     "title": "Neto",
-                    "colspan": 1
+                    "active": true
                 },
                 {
                     "title": "IVA",
-                    "colspan": 1
+                    "active": false
                 },
                 {
                     "title": "Otros Impuestos",
-                    "colspan": 1
+                    "active": true
                 },
                 {
                     "title": "Total",
-                    "colspan": 1
+                    "active": true
                 },
                 {
                     "title": "Estado",
-                    "colspan": 1
-                }
-            ],
-            "totalTabsFacturas": [{
-                "title": "Total General"
-
-            },{
-                "title": "Iva Terceros"
-
-            }],
-            "totalTabsNC": [{
-                "title": "Total General"
-            },{
-                "title": "Iva Terceros"
-
-            },{
-                "title": "Impuestos no recuperables"
-
-            }],
-            "totalFacturas": [
-                {
-                    "group": "Total Venta Dia",
-                    
-                    "important": true,
-                    "detail": [
-                        {
-                            "key": "Cantidad",
-                            "value": "234359"
-                        },
-                        {
-                            "key": "Neto",
-                            "value": "105000"
-                        },
-                        {
-                            "key": "IVA",
-                            "value": "0"
-                        },
-                        {
-                            "key": "Otros Impuestos",
-                            "value": "0"
-                        },
-                        {
-                            "key": "Total",
-                            "value": "0"
-                        }
-                        
-                    ]
-                },
-                {
-                    "group": "Total Arrastre Dias Anteriores",
-                    
-                    "important": true,
-                    "detail": [
-                        {
-                            "key": "Cantidad",
-                            "value": "234359"
-                        },
-                        {
-                            "key": "Neto",
-                            "value": "105000"
-                        },
-                        {
-                            "key": "IVA",
-                            "value": "0"
-                        },
-                        {
-                            "key": "Otros Impuestos",
-                            "value": "0"
-                        },
-                        {
-                            "key": "Total",
-                            "value": "0"
-                        }
-                    ]
-                },
-                {
-                    "group": "Total Acumulado Al Dia",
-                    
-                    "important": true,
-                    "detail": [
-                        {
-                            "key": "Cantidad",
-                            "value": "234359"
-                        },
-                        {
-                            "key": "Neto",
-                            "value": "105000"
-                        },
-                        {
-                            "key": "IVA",
-                            "value": "0"
-                        },
-                        {
-                            "key": "Otros Impuestos",
-                            "value": "0"
-                        },
-                        {
-                            "key": "Total",
-                            "value": "0"
-                        }
-                    ]
+                    "active": true
                 }
             ]
         } 

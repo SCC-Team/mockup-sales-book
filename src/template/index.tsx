@@ -38,7 +38,7 @@ export const Template = () => {
         {terminal ? (
           <Terminal handleRender={handleRender} />
         ) : (
-          <SalesBook handleRender={handleRender} />
+          <SalesBook  customDensity/>
         )}
       </section>
     </div>
