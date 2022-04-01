@@ -1,0 +1,13 @@
+{
+    "data": {
+        "results": [
+           {"type": "Factura"},
+           {"type": "Nota de debito"},
+           {"type": "Nota de credito"},
+           {"type": "Guias"},
+           {"type": "Reversa de Guia del Mes"},
+           {"type": "Reversa de Guia Mes Anterior"}
+           
+        ]
+    }
+}  

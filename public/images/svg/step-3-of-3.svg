@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="503" height="53.5" viewBox="0 0 503 53.5">
+  <g id="Group_229" data-name="Group 229" transform="translate(-546 -234)">
+    <path id="Line" d="M.5.5h190" transform="translate(588.5 254)" fill="none" stroke="#0b58a3" stroke-linecap="square" stroke-miterlimit="10" stroke-width="2"/>
+    <path id="Line-2" data-name="Line" d="M.5.5h190" transform="translate(818.5 254)" fill="none" stroke="#0b58a3" stroke-linecap="square" stroke-miterlimit="10" stroke-width="2"/>
+    <circle id="Oval" cx="20" cy="20" r="20" transform="translate(549 234)" fill="#0a58a3"/>
+    <text id="_2" data-name="2" transform="translate(562 262)" fill="#fff" font-size="24" font-family="RobotoRegular, sans-serif" font-weight="500"><tspan x="0" y="0">1</tspan></text>
+    <text id="Label" transform="translate(569 285.5)" fill="#0058a3" font-size="9" font-family="RobotoRegular, sans-serif" letter-spacing="-0.025em"><tspan x="-22.257" y="0">Documento</tspan></text>
+    <circle id="Oval-2" data-name="Oval" cx="20" cy="20" r="20" transform="translate(779 234)" fill="#0b58a3"/>
+    <circle id="Oval-3" data-name="Oval" cx="20" cy="20" r="20" transform="translate(1009 234)" fill="#0b58a3"/>
+    <text id="_2-2" data-name="2" transform="translate(792 262)" fill="#fff" font-size="24" font-family="RobotoRegular, sans-serif" font-weight="500"><tspan x="0" y="0">2</tspan></text>
+    <text id="_2-3" data-name="2" transform="translate(1022 262)" fill="#fff" font-size="24" font-family="RobotoRegular, sans-serif" font-weight="500"><tspan x="0" y="0">3</tspan></text>
+    <text id="Label-2" data-name="Label" transform="translate(799 285.5)" fill="#0b58a3" font-size="9" font-family="RobotoRegular, sans-serif" letter-spacing="-0.025em"><tspan x="-14.728" y="0">Montos</tspan></text>
+    <text id="Label-3" data-name="Label" transform="translate(1029 285.5)" fill="#0b58a3" font-size="9" font-family="RobotoRegular, sans-serif" letter-spacing="-0.025em"><tspan x="-12.538" y="0">Origen</tspan></text>
+  </g>
+</svg>

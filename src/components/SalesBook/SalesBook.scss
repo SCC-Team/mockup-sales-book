@@ -124,4 +124,57 @@
       }
     }
   }
+
+ 
+}
+
+.popUp-column {
+  left: calc(100% - 75vw) !important;
+  top: calc(100% - 40vw) !important;
+  width: 45% !important;
+  h3 {
+    margin: 0 auto;
+  }
+}
+
+.modal-table-container {
+  width: 100%;
+  border-radius: 0.3rem;
+  overflow-x: auto;
+
+  &--tables {
+    @include table(
+      0.5rem,
+      $color-text-active,
+      $white,
+      left,
+      left,
+      $color-text,
+      $color-text,
+      $blue-dark,
+      $blue-dark,
+      $white,
+      1rem
+    );
+  }
+
+  input {
+    width: 90%;
+  }
+
+  .total-th {
+    background-color: #686868;
+    text-align: right;
+    padding: 0 40px;
+  }
+
+  table {
+    thead {
+      tr {
+        th:nth-child(1) {
+          width: 70%;
+        }
+      }
+    }
+  }
 }
